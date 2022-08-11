@@ -1,3 +1,3 @@
 # KQL Queries
 
-A repository in which I store qurries I've developed or contributed.
+A repository in which I store KQL querries I've developed or contributed to for Microsoft Sentinel & Microsoft Security Center.
