@@ -1,6 +1,7 @@
-```diff
-+ //Identify MITRE ATT&CK Techniques at Microsoft Security Center during the last 30 days and provide results in a piechart
-```
+![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) 
+//Identify MITRE ATT&CK Techniques at Microsoft Security Center during the last 30 days and provide results in a piechart
+`#c5f015`
+
 AlertInfo
 | where Timestamp > ago(30d)
 | where AttackTechniques != ""
