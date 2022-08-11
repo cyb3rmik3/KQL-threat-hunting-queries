@@ -1,0 +1,8 @@
+//Identify MITRE ATT&CK Techniques at Microsoft Security Center during the last 30 days and provide results in a piechart
+
+AlertInfo
+| where Timestamp > ago(30d)
+| where AttackTechniques != ""
+| mvexpand todynamic(AttackTechniques)
+| summarize count() by tostring(AttackTechniques)
+| render piechart 
