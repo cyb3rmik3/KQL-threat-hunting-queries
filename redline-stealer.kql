@@ -4,3 +4,9 @@ DeviceNetworkEvents
 | where InitiatingProcessFileName contains ".scr"
 | summarize arg_max(Timestamp, *) by DeviceName
 | project Timestamp, DeviceName
+
+DeviceProcessEvents
+| where FileName has_any (@"cmd.exe", @"powershell.exe", @".exe")
+| where InitiatingProcessFileName contains ".scr"
+| summarize arg_max(Timestamp, *) by DeviceName
+| project Timestamp, DeviceName
