@@ -1,0 +1,6 @@
+DeviceNetworkEvents
+| where Protocol contains "tcp"
+| where RemoteIPType contains "Public"
+| where InitiatingProcessFileName contains ".scr"
+| summarize arg_max(Timestamp, *) by DeviceName
+| project Timestamp, DeviceName
