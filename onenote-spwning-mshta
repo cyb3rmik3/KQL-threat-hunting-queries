@@ -1,4 +1,0 @@
-// Security Center Onenote spawning MSHTA detection query
-DeviceProcessEvents
-| where InitiatingProcessParentFileName contains "onenote.exe"
-| where InitiatingProcessFileName contains "mshta.exe"

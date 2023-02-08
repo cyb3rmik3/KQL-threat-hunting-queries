@@ -1,0 +1,4 @@
+// Security Center Onenote spawning suspicious processes detection query
+DeviceProcessEvents
+| where InitiatingProcessParentFileName contains @"ONENOTE.EXE"
+| where InitiatingProcessFileName has_any (@"powershell.exe", @"pwsh.exe", @"wscript.exe", @"cscript.exe", @"mshta.exe", @"cmd.exe")
