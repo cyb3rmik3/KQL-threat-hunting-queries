@@ -1,4 +1,4 @@
-# KQL Queries
+# Threat hunting/detecting using KQL queries
 
 ```
   _  _____  _       _____ _   _ ____  _____    _  _____   _   _ _   _ _   _ _____ ___ _   _  ____ 
