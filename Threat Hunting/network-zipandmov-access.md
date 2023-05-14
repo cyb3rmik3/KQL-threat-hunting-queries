@@ -27,5 +27,5 @@ DeviceNetworkEvents
 
 ### MITRE ATT&CK Mapping
 
-##### T1204.001
-[User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
+- ##### T1204.001
+- [User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
