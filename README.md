@@ -15,4 +15,4 @@ A repository in which I store KQL queries I've developed or contributed to, for 
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
 
-# Security KQL contributors to keep in your bookmarks
+# Bookmarked Security KQL contributors
