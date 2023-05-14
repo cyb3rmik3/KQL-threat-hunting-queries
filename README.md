@@ -10,3 +10,9 @@
 ```                                                                                             
                                                                                              
 A repository in which I store KQL queries I've developed or contributed to, for Microsoft Sentinel & Microsoft Security Center.
+
+# KQL Training
+
+## Microsoft Security Operations Analyst Associate (SC-200)
+
+# Security KQL contributors to keep in your bookmarks
