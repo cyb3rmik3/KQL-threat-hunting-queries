@@ -9,12 +9,10 @@
                                                                                                          
 ```                                                                                             
                                                                                              
-A repository in which I store KQL queries I've developed or contributed to, for Microsoft Sentinel & Microsoft Security Center.
+Under heavy development.
 
 # KQL Training
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
-
-// ![Microsoft Security Operations Analyst Associate (SC-200)](https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg)
 
 # Bookmarked Security KQL contributors
