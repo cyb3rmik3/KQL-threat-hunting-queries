@@ -15,4 +15,6 @@ A repository in which I store KQL queries I've developed or contributed to, for 
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
 
+![Microsoft Security Operations Analyst Associate (SC-200)]([https://myoctocat.com/assets/images/base-octocat.svg](https://images.credly.com/size/680x680/images/7e75516f-5149-4d19-8d09-aa3dab4907cb/security-operations-analyst-associate-600x600.png))
+
 # Bookmarked Security KQL contributors
