@@ -36,3 +36,8 @@ DeviceNetworkEvents
 ### MITRE ATT&CK Mapping
 - Technique ID: T1204.001
 - [User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
+
+### Versioning
+| Version       | Date          | Comments        |
+| ------------- |---------------| ----------------|
+| 1.0           | 14/05/2023    | Initial publish |
