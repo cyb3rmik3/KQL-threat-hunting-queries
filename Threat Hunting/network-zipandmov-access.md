@@ -2,7 +2,7 @@
 
 ### Description
 
-Google recently announced a series of new gTLDs available for registration amongst them, .zip and .mov. While Google saw an opportunity in providing public access to these domains, defenders are already worried that they could be used for malicious pruposes. The following queries might score high in precision as they will return requests for .zip and .mov files in resutls, however it could be a good starting point for threat hunting. Also, query provides a hunting opportunity for .zip and .mov accessed domains originating from file explorer.
+Google recently announced a series of new gTLDs available for registration amongst them, .zip and .mov. While Google saw an opportunity in providing public access to these domains, defenders are already worried that they could be used for malicious purposes. The following queries might score high in precision as they will return requests for .zip and .mov files in results, however it could be a good starting point for threat hunting. Also, query provides a hunting opportunity for .zip and .mov accessed domains originating from file explorer.
 
 ### References
 - https://blog.google/products/registry/8-new-top-level-domains-for-dads-grads-tech/
