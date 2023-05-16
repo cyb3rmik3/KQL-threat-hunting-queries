@@ -11,6 +11,10 @@
                                                                                              
 Under heavy development.
 
+# Disclaimer
+
+
+
 # KQL Training
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
