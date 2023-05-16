@@ -16,7 +16,7 @@ DeviceNetworkEvents
 | where Timestamp > ago(1d)
 // Remove the line below in case you want to look into both successful and unsuccessful events
 | where ActionType == "ConnectionSuccess"
-// The line below refers to connections made when requestion a .zip through file explorer
+// The line below refers to connections made when requesting a .zip through file explorer
 // | where InitiatingProcessFileName == @"svchost.exe"
 // Define RemoteURL
 | where RemoteUrl startswith "https://" or RemoteUrl startswith "http://"
@@ -36,7 +36,7 @@ DeviceNetworkEvents
 | where TimeGenerated > ago(1d)
 // Remove the line below in case you want to look into both successful and unsuccessful events
 | where ActionType == "ConnectionSuccess"
-// The line below refers to connections made when requestion a .zip through file explorer
+// The line below refers to connections made when requesting a .zip through file explorer
 // | where InitiatingProcessFileName == @"svchost.exe"
 // Define RemoteURL
 | where RemoteUrl startswith "https://" or RemoteUrl startswith "http://"
