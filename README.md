@@ -13,7 +13,7 @@ Under heavy development.
 
 # Disclaimer
 
-
+The KQL queries in this GitHub repository are provided for informational purposes only. Users are solely responsible for their usage and should exercise caution. The repository maintainers are not liable for any consequences arising from the use or misuse of these queries. It is advised to thoroughly understand and test the queries before implementing them in a production environment.
 
 # KQL Training
 
