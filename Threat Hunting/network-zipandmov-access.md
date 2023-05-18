@@ -12,7 +12,7 @@ Google recently announced a series of new gTLDs available for registration among
 ### Microsoft 365 Defender
 ```
 DeviceNetworkEvents
-// Define the time you are interested to look into
+<code style="color : green">// Define the time you are interested to look into</code>
 | where Timestamp > ago(1d)
 // Remove the line below in case you want to look into both successful and unsuccessful events
 | where ActionType == "ConnectionSuccess"
