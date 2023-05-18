@@ -24,6 +24,10 @@ https://learn.microsoft.com/en-us/certifications/exams/sc-200/
 https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/
 https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/
 
+## Other sources
+
+[Basic searching and string operators](https://www.kustoking.com/basic-searching-and-string-operators/)
+
 # KQL Basics
 
 # Bookmarked Security KQL contributors
