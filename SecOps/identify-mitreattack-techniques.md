@@ -28,7 +28,7 @@ SecurityAlert
 ```
 
 ### Versioning
-| Version       | Date          | Comments                          |
-| ------------- |---------------| ----------------------------------|
-| 1.0           | 14/05/2023    | Initial publish                   |
-| 1.1           | 16/05/2023    | Transformed query for high recall |
+| Version       | Date          | Comments                               |
+| ------------- |---------------| ---------------------------------------|
+| 1.0           | 01/02/2023    | Initial publish                        |
+| 1.1           | 18/05/2023    | Transformed to template, minor changes |
