@@ -19,4 +19,11 @@ The KQL queries in this GitHub repository are provided for informational purpose
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
 
+https://learn.microsoft.com/en-us/certifications/exams/sc-200/
+
+https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/
+https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/
+
+# KQL Basics
+
 # Bookmarked Security KQL contributors
