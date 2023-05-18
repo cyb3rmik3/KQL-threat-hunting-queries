@@ -1,22 +1,24 @@
 # Identify MITRE ATT&CK Techniques
 
 ```
-//Identify MITRE ATT&CK Techniques at Microsoft Security Center during the last 30 days and provide results in a piechart
 AlertInfo
+// Define timerange
 | where Timestamp > ago(30d)
 | where AttackTechniques != ""
 | mvexpand todynamic(AttackTechniques)
 | summarize count() by tostring(AttackTechniques)
+// Define graphic
 | render piechart 
 ```
 
 ```
-//Identify MITRE ATT&CK Techniques at Microsoft Sentinel and provide results in a piechart
 SecurityAlert
+// Define timerange
 | where TimeGenerated > ago(30d)
 | where isnotempty(Techniques)
 | mvexpand todynamic(Techniques) to typeof(string)
 | summarize AlertCount = dcount(SystemAlertId) by Techniques
 | sort by AlertCount desc
+// Define graphic
 | render piechart 
 ```
