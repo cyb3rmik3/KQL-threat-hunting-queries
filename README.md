@@ -31,3 +31,5 @@ https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel
 # KQL Basics
 
 # Bookmarked Security KQL contributors
+
+- [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
