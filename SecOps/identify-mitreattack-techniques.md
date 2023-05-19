@@ -4,6 +4,9 @@
 
 Description
 
+## References
+- https://attack.mitre.org/techniques/enterprise/
+
 ### Microsoft 365 Defender
 ```
 AlertInfo
