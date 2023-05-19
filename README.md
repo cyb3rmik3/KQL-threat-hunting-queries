@@ -17,7 +17,7 @@ Enjoy, and please reach out for any concerns and suggestions: [cyb3rmik3](https:
 # KQL Training
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
-If Microsoft Sentinel and Microsoft 365 Defender are your daily to-go tools, you should consider following Microsoft's Certified Security Operations Analyst (Exam code [SC-200](https://learn.microsoft.com/en-us/certifications/exams/sc-200/) course. You will be acquainted with Microsoft's wide range of Security products and how you can use them to provide data, security signal and analyze alerts and incidents.
+If Microsoft Sentinel and Microsoft 365 Defender are your daily to-go tools, you should consider following Microsoft's Certified Security Operations Analyst course (Exam code [SC-200](https://learn.microsoft.com/en-us/certifications/exams/sc-200/)). You will be acquainted with Microsoft's wide range of Security products and how you can use them to provide data, security signal and analyze alerts and incidents.
 
 Be that as it may, you can jump into Microsoft's course that focus on KQL:
 - [Utilize KQL for Azure Sentinel](https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/)
