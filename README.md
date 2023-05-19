@@ -14,10 +14,6 @@ This repository is an effort to provide ready-made detection and hunting queries
 
 Enjoy, and please reach out for any concerns and suggestions: [cyb3rmik3](https://twitter.com/Cyb3rMik3).
 
-# Disclaimer
-
-The KQL queries in this GitHub repository are provided for informational purposes only. Users are solely responsible for their usage and should exercise caution. It is advised to thoroughly understand and test the queries before implementing them in a production environment.
-
 # KQL Training
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
@@ -39,3 +35,7 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 # Bookmarked Security KQL contributors
 
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
+
+# Disclaimer
+
+The KQL queries in this GitHub repository are provided for informational purposes only. Users are solely responsible for their usage and should exercise caution. It is advised to thoroughly understand and test the queries before implementing them in a production environment.
