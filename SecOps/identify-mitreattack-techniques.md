@@ -4,6 +4,7 @@
 
 Description
 
+### Microsoft 365 Defender
 ```
 AlertInfo
 // Define timerange
@@ -14,7 +15,7 @@ AlertInfo
 // Define graphic
 | render piechart 
 ```
-
+### Microsoft Sentinel
 ```
 SecurityAlert
 // Define timerange
