@@ -1,5 +1,4 @@
-# Threat hunting/detecting using KQL queries
-
+# Threat hunting/detecting using KQL queries 
 ```
   _  _____  _       _____ _   _ ____  _____    _  _____   _   _ _   _ _   _ _____ ___ _   _  ____ 
  | |/ / _ \| |     |_   _| | | |  _ \| ____|  / \|_   _| | | | | | | | \ | |_   _|_ _| \ | |/ ___|
@@ -9,7 +8,11 @@
                                                                                                          
 ```                                                                                             
                                                                                              
-Under heavy development.
+This repository is an effort to provide ready-made detection and hunting queries in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft 365 Defender. Please:
+- Read the disclaimer below.
+- If you found a useful query here, consider giving a star to this repository.
+
+Enjoy, and please reach out for any concerns and suggestions: [cyb3rmik3](https://twitter.com/Cyb3rMik3).
 
 # Disclaimer
 
@@ -18,11 +21,14 @@ The KQL queries in this GitHub repository are provided for informational purpose
 # KQL Training
 
 ## Microsoft Security Operations Analyst Associate (SC-200)
+If Microsoft Sentinel and Microsoft 365 Defender are your daily to-go tools, you should consider following Microsoft's Certified Security Operations Analyst (Exam code [SC-200](https://learn.microsoft.com/en-us/certifications/exams/sc-200/) course. You will be acquainted with Microsoft's wide range of Security products and how you can use them to provide data, security signal and analyze alerts and incidents.
 
-https://learn.microsoft.com/en-us/certifications/exams/sc-200/
+Be that as it may, you can jump into Microsoft's course that focus on KQL:
+- [Utilize KQL for Azure Sentinel](https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/)
+- [Configure Azure Sentinel environment](https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/)
 
-https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/
-https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/
+## Microsoft recommeneded training
+
 
 ## Other sources
 
