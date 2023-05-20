@@ -15,10 +15,10 @@ I try to map threat hunting & detecting queries on MITRE ATT&CK framework and he
 
 ### Execution
 
-| Title        | Technique ID           | Date added  |
-|---------------|---------------|-------|
-| [WScript to VBS file invoking PowerShell](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/wscript-vbs-spawning-suspicious-processes.md)      | T1059.001 | 17/02/2023 |
-| [Endpoints accessing .zip or .mov websites](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/network-zipandmov-access.md)      | T1204.001 | 14/05/2023 |
+| Title        | Technique ID           | Date added  | Last update |
+|---------------|---------------|-------|-------|
+| [WScript to VBS file invoking PowerShell](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/wscript-vbs-spawning-suspicious-processes.md)      | T1059.001 | 17/02/2023 | 20/05/2023 |
+| [Endpoints accessing .zip or .mov websites](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/network-zipandmov-access.md)      | T1204.001 | 14/05/2023 | 16/05/2023 |
 
 ## Queries not mapped on MITRE ATT&CK
 
