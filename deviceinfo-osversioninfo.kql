@@ -1,7 +1,0 @@
-// Detect through DeviceInfo relevant a count of deviced based on OSVersionInfo
-
-DeviceInfo
-| where Timestamp > ago(90d)
-| summarize arg_max(Timestamp, *) by DeviceName
-| summarize DeviceCount = dcount(DeviceName) by OSVersionInfo
-| sort by DeviceCount asc 
