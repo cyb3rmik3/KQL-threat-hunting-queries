@@ -1,9 +1,9 @@
 # Queries MITRE ATT&CK Mapping
 
 I try to map threat hunting & detecting queries on MITRE ATT&CK framework and hence, as soon as a query is added it will be also be indexed below per Tactic and a heat map over covered techniques and sub-techniques will be also be maintained.
-- [Queries Heatmap](#Queries-Heatmap)
-- [Queries mapped on MITRE ATT&CK](#Queries-mapped-on-MITRE-ATT&CK)
-- [Queries not mapped on MITRE ATT&CK](#Queries-not-mapped-on-MITRE-ATT&CK)
+- [Queries Heatmap](# Queries-Heatmap)
+- [Queries mapped on MITRE ATT&CK](# Queries-mapped-on-MITRE-ATT&CK)
+- [Queries not mapped on MITRE ATT&CK](# Queries-not-mapped-on-MITRE-ATT&CK)
 
 ## Queries Heatmap
 
