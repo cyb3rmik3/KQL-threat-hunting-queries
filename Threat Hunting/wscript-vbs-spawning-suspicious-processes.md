@@ -39,8 +39,8 @@ DeviceProcessEvents
 
 ### MITRE ATT&CK Mapping
 - Tactic: Execution
-- Technique ID: T1059
-- [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)
+- Technique ID: T1059.001
+- [Command and Scripting Interpreter: PowerShell](https://attack.mitre.org/techniques/T1059/001/)
 
 ### Source
 - MDE
