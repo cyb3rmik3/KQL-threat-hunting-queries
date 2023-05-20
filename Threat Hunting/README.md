@@ -2,7 +2,8 @@
 
 ## Queries Heatmap
 
-
+![Alt text](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/images/mitreattackheatmap.svg)
+<img src="https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/images/mitreattackheatmap.svg">
 
 ## Queries mapped on MITRE ATT&CK
 
