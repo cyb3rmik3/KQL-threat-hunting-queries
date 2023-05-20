@@ -10,7 +10,7 @@
                                                                                              
 This repository is an effort to provide ready-made detection and hunting queries in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft 365 Defender. Please:
 - Read the disclaimer below.
-- If you found a useful query here, consider giving a star to this repository.
+- If you found a useful query here, consider giving a :star: to this repository.
 
 Enjoy, and please reach out for any concerns and suggestions: [cyb3rmik3](https://twitter.com/Cyb3rMik3).
 
