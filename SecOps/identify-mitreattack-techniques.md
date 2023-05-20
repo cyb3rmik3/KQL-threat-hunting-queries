@@ -2,7 +2,7 @@
 
 ## Description
 
-Description
+The following queries provide for Microsoft Sentinel and Microsoft 365 Defender a graphic representation of MITRE ATT&CK techniques from alerts within the timerange defined.
 
 ## References
 - https://attack.mitre.org/techniques/enterprise/
