@@ -38,6 +38,7 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 - [Bert-Jan](https://github.com/Bert-JanP)
 - [Matt Zorich](https://github.com/reprise99)
 - [Kijo](https://github.com/LearningKijo)
+- [KustoKing](https://www.kustoking.com/)
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
 
 # Disclaimer
