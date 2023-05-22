@@ -32,6 +32,8 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 
 # KQL Basics
 
+# Threat Hunting Basics
+
 # Bookmarked Security KQL contributors
 
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
