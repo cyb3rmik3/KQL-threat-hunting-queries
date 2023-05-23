@@ -34,17 +34,27 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 
 ### Choose appropriate table
 
-### where operator
 
+### where operator
 where filters on a specific predicate
+```
+```
 
 ### contains/has
+- Contains: Looks for any substring match
+- Has: Looks for a specific word (better performance)
+```
+```
 
 ### ago
+Returns the time offset relative to the time the query executes. For example, ago(1h) is one hour before the current clock's reading.
+```
+```
 
 ### project
-
-
+Selects the columns to include in the order specified
+```
+```
 
 # Threat Hunting Basics
 
