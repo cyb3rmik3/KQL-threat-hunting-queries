@@ -25,6 +25,6 @@ DeviceNetworkEvents
 ### Versioning
 | Version       | Date          | Comments                      |
 | ------------- |---------------| ------------------------------|
-| 1.0           | 08/08/2022    | Initial publish               |
+| 1.0           | 08/11/2022    | Initial publish               |
 | 1.1           | 23/05/2023    | Modified template, ATT&CK map |
 
