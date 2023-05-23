@@ -8,9 +8,14 @@
                                                                                                          
 ```                                                                                             
                                                                                              
-This repository is an effort to provide ready-made detection and hunting queries in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft 365 Defender. 
-ToC
+This repository is an effort to provide ready-made detection and hunting queries (and more) in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft 365 Defender. 
 - [KQL Training](#kql-training)
+ - [Microsoft recommeneded training](#microsoft-recommeneded-training)
+ - [Other resource](#other-resources)
+- [KQL Basics](#kql-basics)
+- [Threat Hunting Basics](#threat-hunting-basics)
+- [Bookmarked Security KQL contributors](#bookmarked-security-kql-contributors)
+- [Disclaimer](#disclaimer)
 
 Please:
 - Read the disclaimer below.
@@ -30,7 +35,7 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 ## Microsoft recommeneded training
 
 
-## Other sources
+## Other resources
 
 [Basic searching and string operators](https://www.kustoking.com/basic-searching-and-string-operators/)
 
