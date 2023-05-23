@@ -30,4 +30,4 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 
 ## Queries not mapped on MITRE ATT&CK
 
-Updated: 20/5/2023
+Updated: 23/5/2023
