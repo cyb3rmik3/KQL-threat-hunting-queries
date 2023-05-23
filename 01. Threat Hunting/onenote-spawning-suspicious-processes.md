@@ -1,4 +1,4 @@
-# Onenote spawning suspicious processes
+# OneNote spawning suspicious processes
 
 ### Description
 
