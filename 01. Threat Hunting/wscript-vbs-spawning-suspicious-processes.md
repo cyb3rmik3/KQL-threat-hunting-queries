@@ -1,4 +1,3 @@
- GULOADER
 # WScript to VBS file invoking PowerShell
 
 ### Description
