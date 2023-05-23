@@ -1,11 +1,3 @@
-
-
-DeviceProcessEvents
-| where FileName has_any (@"cmd.exe", @"powershell.exe", @".exe")
-| where InitiatingProcessFileName contains ".scr"
-| summarize arg_max(Timestamp, *) by DeviceName
-| project Timestamp, DeviceName
-
 # Screensaver file invoking internet access
 
 ### Description
@@ -23,9 +15,9 @@ DeviceNetworkEvents
 ```
 
 ### MITRE ATT&CK Mapping
-- Tactic: Execution
+- Tactic: Persistence
 - Technique ID: T1546.002
-- [Event Triggered Execution: Screensaver](https://attack.mitre.org/techniques/T1046/002/)
+- [Event Triggered Execution: Screensaver](https://attack.mitre.org/techniques/T1546/002/)
 
 ### Source
 - MDE
