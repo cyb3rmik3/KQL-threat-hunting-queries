@@ -1,6 +1,6 @@
 # Queries MITRE ATT&CK Mapping
 
-I try to map threat hunting & detecting queries on MITRE ATT&CK framework and hence, as soon as a query is added it will be also be indexed below per Tactic and a heat map over covered techniques and sub-techniques will be also be maintained.
+I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon as a query is added it will be also be indexed below per Tactic and a heat map over covered techniques and sub-techniques will be also be maintained.
 
 #### Navigation
 - Queries Heatmap
