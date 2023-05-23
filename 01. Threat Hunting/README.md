@@ -9,7 +9,7 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 
 ## Queries Heatmap
 
-<img src="https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/images/mitreattackheatmap.svg">
+<img src="https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/efd4043bdfd88871341f9c161668049ecd786c4c/01.%20Threat%20Hunting/attackmapping_20230523.svg">
 
 ## Queries mapped on MITRE ATT&CK
 
