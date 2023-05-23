@@ -29,13 +29,6 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 - [Utilize KQL for Azure Sentinel](https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/)
 - [Configure Azure Sentinel environment](https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/)
 
-## Microsoft recommeneded training
-
-
-## Other resources
-
-[Basic searching and string operators](https://www.kustoking.com/basic-searching-and-string-operators/)
-
 # KQL Basics
 
 ### Choose appropriate table
