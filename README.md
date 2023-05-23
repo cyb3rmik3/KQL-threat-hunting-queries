@@ -13,10 +13,9 @@ This repository is an effort to provide ready-made detection and hunting queries
 - [KQL Basics](#kql-basics)
 - [Threat Hunting Basics](#threat-hunting-basics)
 - [Bookmarked Security KQL contributors](#bookmarked-security-kql-contributors)
-- [Disclaimer](#disclaimer)
 
 Please:
-- Read the disclaimer below.
+- Read the [Disclaimer](#disclaimer) below.
 - If you found a useful query here, consider giving a :star: to this repository.
 
 Enjoy, and please reach out for any concerns and suggestions: [cyb3rmik3](https://twitter.com/Cyb3rMik3).
