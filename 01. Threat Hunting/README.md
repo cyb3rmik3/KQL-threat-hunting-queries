@@ -25,6 +25,7 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | [Screensaver file invoking suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/screensaver-file-invoking-suspicious-processes.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 
 ## Queries not mapped on MITRE ATT&CK
+None.
 
 ## Queries Heatmap
 
