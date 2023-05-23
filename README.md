@@ -84,6 +84,7 @@ The approach to hunting has two components: Characterization of malicious activi
 - [Kijo](https://github.com/LearningKijo)
 - [KustoKing](https://www.kustoking.com/)
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
+- [seccnet](https://github.com/secnnet/Microsoft-365-Defender-Hunting-Queries/blob/main/Top%20Hunting%20Queries.txt)
 
 # Disclaimer
 
