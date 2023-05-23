@@ -13,14 +13,14 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 
 | Title        | Technique ID           | Date added  | Last update |
 |---------------|---------------|-------|-------|
-| [WScript to VBS file invoking PowerShell](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/wscript-vbs-spawning-suspicious-processes.md)      | T1059.001 | 17/02/2023 | 20/05/2023 |
-| [Endpoints accessing .zip or .mov websites](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/network-zipandmov-access.md)      | T1204.001 | 14/05/2023 | 16/05/2023 |
+| [WScript to VBS file invoking PowerShell](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/wscript-vbs-spawning-suspicious-processes.md)      | T1059.001 | 17/02/2023 | 20/05/2023 |
+| [Endpoints accessing .zip or .mov websites](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/network-zipandmov-access.md)      | T1204.001 | 14/05/2023 | 16/05/2023 |
 
 ### Privilege escalation
 
 | Title        | Technique ID           | Date added  | Last update |
 |---------------|---------------|-------|-------|
-| [OneNote spawning suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Threat%20Hunting/wscript-vbs-spawning-suspicious-processes.md)      | T1055.012 | 08/02/2023 | 23/05/2023 |
+| [OneNote spawning suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/wscript-vbs-spawning-suspicious-processes.md)      | T1055.012 | 08/02/2023 | 23/05/2023 |
 | [Screensaver file invoking internet access](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/screensaver-file-invoking-internet-access.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 | [Screensaver file invoking suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/screensaver-file-invoking-suspicious-processes.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 
