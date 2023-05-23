@@ -10,8 +10,6 @@
                                                                                              
 This repository is an effort to provide ready-made detection and hunting queries (and more) in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft 365 Defender. 
 - [KQL Training](#kql-training)
- - [Microsoft recommeneded training](#microsoft-recommeneded-training)
- - [Other resource](#other-resources)
 - [KQL Basics](#kql-basics)
 - [Threat Hunting Basics](#threat-hunting-basics)
 - [Bookmarked Security KQL contributors](#bookmarked-security-kql-contributors)
@@ -47,6 +45,7 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 ### where operator
 where filters on a specific predicate
 ```
+
 ```
 
 ### contains/has
@@ -56,7 +55,7 @@ where filters on a specific predicate
 ```
 
 ### ago
-Returns the time offset relative to the time the query executes. For example, ago(1h) is one hour before the current clock's reading.
+Returns the time offset relative to the time the query executes
 ```
 ```
 
