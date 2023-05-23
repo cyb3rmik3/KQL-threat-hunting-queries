@@ -32,6 +32,20 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 
 # KQL Basics
 
+### Choose appropriate table
+
+### where operator
+
+where filters on a specific predicate
+
+### contains/has
+
+### ago
+
+### project
+
+
+
 # Threat Hunting Basics
 
 # Bookmarked Security KQL contributors
