@@ -8,7 +8,11 @@
                                                                                                          
 ```                                                                                             
                                                                                              
-This repository is an effort to provide ready-made detection and hunting queries in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft 365 Defender. Please:
+This repository is an effort to provide ready-made detection and hunting queries in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft 365 Defender. 
+ToC
+- [KQL Training](#kql-training)
+
+Please:
 - Read the disclaimer below.
 - If you found a useful query here, consider giving a :star: to this repository.
 
