@@ -76,13 +76,13 @@ DeviceNetworkEvents
 ## Microsoft Threat Hunting
 Threat hunting should be a continual process. We start at the top of our cycle with our Hypothesis. Our Hypothesis helps us plan out what we are going to hunt for, which requires us to understand where we're going to hunt and how we'll do it. This means we need to understand the data we have, the tools we have, the expertise we have, and how to work with them. The hunting cycle doesn't stop when we execute the hunt. There are still several phases we need to conduct throughout the life cycle, including responding to anomalies. Even if we don't find an active threat, there will be activities to perform. [More](https://learn.microsoft.com/en-us/training/paths/sc-200-perform-threat-hunting-azure-sentinel/).
 <p align="center">
-  <img src="[https://picsum.photos/460/300](https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/main/Threat%20Hunting/images/microsoft-threat-hunting.jpg)">
+  <img src="https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/main/Threat%20Hunting/images/microsoft-threat-hunting.jpg">
 </p>
 
 ## MITRE ATT&CK
 The approach to hunting has two components: Characterization of malicious activity, and hunt Execution. These components should be ongoing activities, continuously updated based on new information about adversaries and terrain. [More](https://www.mitre.org/sites/default/files/2021-11/prs-19-3892-ttp-based-hunting.pdf).
 <p align="center">
-  <img src="[https://picsum.photos/460/300]([https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/main/Threat%20Hunting/images/microsoft-threat-hunting.jpg](https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/main/Threat%20Hunting/images/mitre-attack-threat-hunting.jpg))">
+  <img src="https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/main/Threat%20Hunting/images/mitre-attack-threat-hunting.jpg">
 </p>
 
 # Bookmarked Security KQL contributors
