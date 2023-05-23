@@ -3,13 +3,9 @@
 I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon as a query is added it will be also be indexed below per Tactic and a heat map over covered techniques and sub-techniques will be also be maintained.
 
 #### Navigation
-- Queries Heatmap
 - Queries mapped on MITRE ATT&CK
 - Queries not mapped on MITRE ATT&CK
-
-## Queries Heatmap
-
-<img src="https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/efd4043bdfd88871341f9c161668049ecd786c4c/01.%20Threat%20Hunting/attackmapping_20230523.svg">
+- Queries Heatmap
 
 ## Queries mapped on MITRE ATT&CK
 
@@ -29,5 +25,9 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | [Screensaver file invoking suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/screensaver-file-invoking-suspicious-processes.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 
 ## Queries not mapped on MITRE ATT&CK
+
+## Queries Heatmap
+
+<img src="https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/efd4043bdfd88871341f9c161668049ecd786c4c/01.%20Threat%20Hunting/attackmapping_20230523.svg">
 
 Updated: 23/5/2023
