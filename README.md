@@ -40,28 +40,37 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 # KQL Basics
 
 ### Choose appropriate table
-
+Data is organized into a hierarchy of databases, tables and columns, similar to SQL. For example, the DeviceNetworkEvents table in the advanced hunting schema contains information about network connections and related events. 
 
 ### where operator
 where filters on a specific predicate
 ```
-
+DeviceNetworkEvents
+| where LocalIP == "192.168.0.1"
 ```
 
 ### contains/has
 - Contains: Looks for any substring match
 - Has: Looks for a specific word (better performance)
 ```
+DeviceNetworkEvents
+| where DeviceName has "ComputerName"
 ```
 
 ### ago
 Returns the time offset relative to the time the query executes
 ```
+DeviceNetworkEvents
+| where Timestamp > ago(1d)
 ```
 
 ### project
 Selects the columns to include in the order specified
 ```
+DeviceNetworkEvents
+| where Timestamp > ago(1d)
+| where DeviceName has "ComputerName"
+| project Timestamp, ActionType, RemoteIP, RemotePort, RemoteUrl
 ```
 
 # Threat Hunting Basics
