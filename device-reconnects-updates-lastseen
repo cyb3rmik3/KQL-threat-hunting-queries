@@ -1,8 +1,0 @@
-//A query to look into when a device reconnects updating "Last Seen" field of the device
-
-DeviceInfo
-| where DeviceName has "[insert devicename here]"
-| extend LastSeen = Timestamp
-| where Timestamp >= ago(1h)
-| summarize LastSeen = arg_max(Timestamp, *) by DeviceId
-| project LastSeen, DeviceId, DeviceName
