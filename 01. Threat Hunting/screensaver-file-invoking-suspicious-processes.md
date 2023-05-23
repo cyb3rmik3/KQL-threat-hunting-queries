@@ -14,9 +14,9 @@ DeviceProcessEvents
 ```
 
 ### MITRE ATT&CK Mapping
-- Tactic: Execution
+- Tactic: Persistence
 - Technique ID: T1546.002
-- [Event Triggered Execution: Screensaver](https://attack.mitre.org/techniques/T1046/002/)
+- [Event Triggered Execution: Screensaver](https://attack.mitre.org/techniques/T1546/002/)
 
 ### Source
 - MDE
