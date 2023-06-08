@@ -2,7 +2,7 @@
 
 ### Description
 
-SANS ISC published a diary on 30/05/2023 where ModiLoader installs a Remcos payload which checks for geolocation through web by geoplugin[.]net. The following query checks whether an attempt to connect to geoplugin[.]net has been made by a non-browser application. Query can be modified based on your environment and the browsers used, also other geolocation services could be checked.
+SANS ISC published a diary on 30/05/2023 where ModiLoader installs a Remcos RAT payload which checks for geolocation through web by geoplugin[.]net. The following query checks whether an attempt to connect to geoplugin[.]net has been made by a non-browser application. Query can be modified based on your environment and the browsers used, also other geolocation services could be checked.
 
 ### References
 - https://isc.sans.edu/diary/29896
