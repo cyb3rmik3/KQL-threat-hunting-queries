@@ -24,6 +24,12 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | [Screensaver file invoking internet access](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/screensaver-file-invoking-internet-access.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 | [Screensaver file invoking suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/screensaver-file-invoking-suspicious-processes.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 
+### Discovery
+
+| Title        | Technique ID           | Date added  | Last update |
+|---------------|---------------|-------|-------|
+| [Remcos RAT checking for geolocation through web](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.%20Threat%20Hunting/remcos-rat-checking-for-geolocation.md)      | T1614 | 08/06/2023 | 08/06/2023 |
+
 ## Queries not mapped on MITRE ATT&CK
 None.
 
@@ -31,4 +37,4 @@ None.
 
 <img src="https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/efd4043bdfd88871341f9c161668049ecd786c4c/01.%20Threat%20Hunting/attackmapping_20230523.svg">
 
-Updated: 23/5/2023
+Updated: 08/06/2023
