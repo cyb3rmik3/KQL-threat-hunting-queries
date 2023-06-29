@@ -22,12 +22,12 @@ DeviceEvents
 ### Microsoft Sentinel
 ```
 // Definde hosts of interest
-let Host = dynamic(["HostName1", "HostName2", "HostName3"]);
+let Device = dynamic(["DeviceName1", "DeviceName2", "DeviceName3"]);
 DeviceEvents
 // Definde timeframe below
-| where TimeGenerated > ago(90d)
-| where ActionType has "AntivirusScanComplete"
-| where DeviceName has_any (Host)
+| where TimeGenerated > ago(30d)
+| where DeviceName has_any (Device)
+| where ActionType has "AntivirusScanCompleted"
 | extend AdditionalFields = todynamic(AdditionalFields)
 | extend ScanType = AdditionalFields.["ScanTypeIndex"], StartedBy= AdditionalFields.["User"]
 | project Timestamp, DeviceName, ActionType, ScanType, StartedBy
