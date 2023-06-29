@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query check the "last seen" field and returnd when it was last connected.
+The following query will check for the Devices declared, when was the last Antivirus Scan completed along with the Scan Type (Quick/Full) and which user initiated it.
 
 ### Microsoft 365 Defender
 ```
