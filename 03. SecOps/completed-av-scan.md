@@ -6,8 +6,10 @@ The following query check the "last seen" field and returnd when it was last con
 
 ### Microsoft 365 Defender
 ```
+// Definde hosts of interest
 let Host = dynamic(["HostName1", "HostName2", "HostName3"]);
 DeviceEvents
+// Definde timeframe below
 | where Timestamp > ago(30d)
 | where ActionType has "AntivirusScanComplete"
 | where DeviceName has_any (Host)
@@ -19,9 +21,11 @@ DeviceEvents
 
 ### Microsoft Sentinel
 ```
+// Definde hosts of interest
 let Host = dynamic(["HostName1", "HostName2", "HostName3"]);
 DeviceEvents
-| where Timestamp > ago(30d)
+// Definde timeframe below
+| where TimeGenerated > ago(90d)
 | where ActionType has "AntivirusScanComplete"
 | where DeviceName has_any (Host)
 | extend AdditionalFields = todynamic(AdditionalFields)
