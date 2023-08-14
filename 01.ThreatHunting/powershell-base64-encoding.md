@@ -10,7 +10,7 @@ Hunting for Base64 encoded command lines in PowerShell is crucial to detect and 
 ### Microsoft 365 Defender & Microsoft Sentinel
 ```
 DeviceProcessEvents
-// 
+// Define timeframe
 | where Timestamp > ago(1d)
 | where FileName has_any (@"powershell.exe", @"pwsh.exe", @"powershell_ise.exe")
 | where ProcessCommandLine contains "base64"
