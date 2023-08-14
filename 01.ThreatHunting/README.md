@@ -15,7 +15,7 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | [WScript to VBS file invoking PowerShell](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/wscript-vbs-spawning-suspicious-processes.md)      | T1059.001 | 17/02/2023 | 20/05/2023 |
 | [Endpoints accessing .zip or .mov websites](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/network-zipandmov-access.md)      | T1204.001 | 14/05/2023 | 16/05/2023 |
 | [MOVEit exploit hunting](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/MOVEit-exploit-hunting.md)      | T1623 | 09/06/2023 | 09/06/2023 |
-| [PowerShell Base64 encoding](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/powershell-base64-encoding.md)      | T1059.001 | 14/08/2023 | 14/08/2023 |
+| [PowerShell Base64 encoding](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/powershell-base64-encoding.md)   | T1059.001 | 14/08/2023 | 14/08/2023 |
 
 ### Privilege escalation
 
