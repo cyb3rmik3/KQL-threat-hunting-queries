@@ -5,7 +5,6 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 #### Navigation
 - Queries mapped on MITRE ATT&CK
 - Queries not mapped on MITRE ATT&CK
-- Queries Heatmap
 
 ## Queries mapped on MITRE ATT&CK
 
@@ -17,8 +16,6 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | [Endpoints accessing .zip or .mov websites](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/network-zipandmov-access.md)      | T1204.001 | 14/05/2023 | 16/05/2023 |
 | [MOVEit exploit hunting](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/MOVEit-exploit-hunting.md)      | T1623 | 09/06/2023 | 09/06/2023 |
 
-
-
 ### Privilege escalation
 
 | Title        | Technique ID           | Date added  | Last update |
@@ -27,17 +24,23 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | [Screensaver file invoking internet access](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/screensaver-file-invoking-internet-access.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 | [Screensaver file invoking suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/screensaver-file-invoking-suspicious-processes.md)      | T1623 | 08/11/2022 | 23/05/2023 |
 
+### Defence evasion
+
+| Title        | Technique ID           | Date added  | Last update |
+|---------------|---------------|-------|-------|
+| [CVE-2023-36884 Dropped file hunting](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/CVE-2023-36884-dropped-file.md)      | T1211 | 18/07/2023 | 18/07/2023 |
+
 ### Discovery
 
 | Title        | Technique ID           | Date added  | Last update |
 |---------------|---------------|-------|-------|
 | [Remcos RAT checking for geolocation through web](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/remcos-rat-checking-for-geolocation.md)      | T1614 | 08/06/2023 | 08/06/2023 |
 
+### Command and Control
+
+| Title        | Technique ID           | Date added  | Last update |
+|---------------|---------------|-------|-------|
+| [CVE-2023-36884 URL marker](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/CVE-2023-36884-url-marker.md)      | T1071.001 | 18/07/2023 | 18/07/2023 |
+
 ## Queries not mapped on MITRE ATT&CK
 None.
-
-## Queries Heatmap
-
-<img src="https://raw.githubusercontent.com/cyb3rmik3/KQL-threat-hunting-queries/efd4043bdfd88871341f9c161668049ecd786c4c/01.ThreatHunting/attackmapping_20230523.svg">
-
-Updated: 09/06/2023
