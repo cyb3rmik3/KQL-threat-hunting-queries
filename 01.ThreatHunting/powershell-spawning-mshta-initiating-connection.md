@@ -22,11 +22,9 @@ Process
 ```
 
 ### MITRE ATT&CK Mapping
-- Tactic: Defence Evasion
+- Tactic: Defence evasion
 - Technique ID: T1218.005
 - [System Binary Proxy Execution: Mshta](https://attack.mitre.org/techniques/T1218/005/)
-
-### Source
 
 ### Versioning
 | Version       | Date          | Comments                          |
