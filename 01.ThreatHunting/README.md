@@ -30,8 +30,6 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | Title        | Technique ID           | Date added  | Last update |
 |---------------|---------------|-------|-------|
 | [CVE-2023-36884 Dropped file hunting](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/CVE-2023-36884-dropped-file.md)      | T1211 | 18/07/2023 | 18/07/2023 |
-| Title        | Technique ID           | Date added  | Last update |
-|---------------|---------------|-------|-------|
 | [PowerShell spawning MSHTA & initiating remote connection](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/powershell-spawning-mshta-initiating-connection.md)      | T1218.005 | 16/08/2023 | 16/08/2023 |
 
 ### Discovery
