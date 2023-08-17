@@ -2,7 +2,7 @@
 
 ### Description
 
-Description
+MSHTA is heavily used by advresaries as it allows to execute code using a native application. A scenario observed includes powershell.exe spawning mshta.exe which by itself is suspicious but it is almost certainly malicious when a remote call initiates through an .hta file. The following query will track powershell spawning mshta initiating a remote connection.
 
 ### References
 - https://redcanary.com/threat-detection-report/techniques/mshta/
