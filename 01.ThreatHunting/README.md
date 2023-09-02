@@ -43,6 +43,7 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | Title        | Technique ID           | Date added  | Last update |
 |---------------|---------------|-------|-------|
 | [CVE-2023-36884 URL marker](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/CVE-2023-36884-url-marker.md)      | T1071.001 | 18/07/2023 | 18/07/2023 |
+| [DNS requests to suspicious TLDs](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/dns-requests-to-suspicious-tlds.md)      | T1071.004 | 02/09/2023 | 02/09/2023 |
 
 ## Queries not mapped on MITRE ATT&CK
 None.
