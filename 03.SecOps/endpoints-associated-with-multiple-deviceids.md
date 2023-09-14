@@ -17,6 +17,15 @@ DeviceInfo
 | where DeviceCount > 1
 | project DeviceName, DeviceCount
 ```
+```
+DeviceInfo
+// Definde timeframe below
+| where TimeGenerated > ago(90d)
+| where isnotempty(DeviceId)
+| summarize DeviceCount = dcount(DeviceId) by DeviceName
+| where DeviceCount > 1
+| project DeviceName, DeviceCount
+```
 
 ### Versioning
 | Version       | Date          | Comments                               |
