@@ -9,7 +9,6 @@ There are cases where devices might be formatted and get the same hostname as be
 
 ### Microsoft 365 Defender
 ```
-AlertInfo
 DeviceInfo
 // Definde timeframe below
 | where Timestamp > ago(90d)
@@ -20,7 +19,6 @@ DeviceInfo
 ```
 ### Microsoft Sentinel
 ```
-SecurityAlert
 DeviceInfo
 // Definde timeframe below
 | where TimeGenerated > ago(90d)
@@ -35,3 +33,4 @@ DeviceInfo
 | Version       | Date          | Comments                               |
 | ------------- |---------------| ---------------------------------------|
 | 1.0           | 25/05/2023    | Initial publish                        |
+| 1.1           | 14/09/2023    | Minor change noticed by Marshyp        |
