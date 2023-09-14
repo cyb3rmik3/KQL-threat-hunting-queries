@@ -17,20 +17,9 @@ DeviceInfo
 | where DeviceCount > 1
 | project DeviceName, DeviceCount
 ```
-### Microsoft Sentinel
-```
-DeviceInfo
-// Definde timeframe below
-| where TimeGenerated > ago(90d)
-| where isnotempty(DeviceId)
-| summarize DeviceCount = dcount(DeviceId) by DeviceName
-| where DeviceCount > 1
-| project DeviceName, DeviceCount
-| distinct DeviceName
-```
 
 ### Versioning
 | Version       | Date          | Comments                               |
 | ------------- |---------------| ---------------------------------------|
 | 1.0           | 25/05/2023    | Initial publish                        |
-| 1.1           | 14/09/2023    | Minor change noticed by Marshyp        |
+| 1.1           | 14/09/2023    | Changes based on @Marshyp comments     |
