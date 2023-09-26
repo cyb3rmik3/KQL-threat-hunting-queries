@@ -2,7 +2,7 @@
 
 ## Description
 
-Recently seen in the wild rising further, Lumma stealer has been observed to perform GET method, while using “TeslaBrowser/5.5” user agent.
+Recently seen in the wild rising further, Lumma stealer has been observed to perform HTTP GET method, while using “TeslaBrowser/5.5” user agent.
 
 ### References
 - https://app.any.run/tasks/7e7728b7-9fa6-4978-99f9-b5789aa31a0a/
