@@ -1,0 +1,29 @@
+# Detect lumma stealer by TeslaBrowser user agent
+
+## Description
+
+Recently updated Zeek network layer signals for MDE with SSL inspection offer new detection and hunting possibilities. As some malware use common, default or re-used certificates, the following query could help detect AsyncRAT, Cobalt Strike, QuasarRAT, Laplas Clipper, DcRAT, VenomRAT, BitRAT and Mythic C2.
+
+### References
+- https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enrich-your-advanced-hunting-experience-using-network-layer/ba-p/3794693
+- https://sslbl.abuse.ch/ssl-certificates/
+- https://embee-research.ghost.io/shodan-censys-queries/
+
+### Microsoft 365 Defender & Microsoft Sentinel
+```
+DeviceNetworkEvents
+// Define timeframe 
+| where Timestamp > ago(30d)
+| where ActionType == "SslConnectionInspected"
+| extend AdditionalFields = todynamic(AdditionalFields)
+| extend issuer = tostring(AdditionalFields.issuer), subject = tostring(AdditionalFields.subject), direction = tostring(AdditionalFields.direction)
+| where direction == "Out" and not(ipv4_is_private(RemoteIP))
+// Define issuer and subject parameters
+| where AdditionalFields.issuer has_any ("AsyncRAT Server", "Major Cobalt Strike" "Laplas.app") or AdditionalFields.subject has_any ("AsyncRAT Server", "Major Cobalt Strike", "Quasar Server CA", "Laplas.app", "Mythic", "DcRat", "VenomRAT", "BitRAT")
+| sort by Timestamp desc 
+```
+
+### Versioning
+| Version       | Date          | Comments                               |
+| ------------- |---------------| ---------------------------------------|
+| 1.0           | 26/09/2023    | Initial publish                        |
