@@ -1,4 +1,4 @@
-# Detect malware communication using SSL inspection
+# Review recently received emails with attachments
 
 ## Description
 
@@ -9,16 +9,19 @@ The following query will list all emails received on the Timeframe specified tha
 
 ### Microsoft 365 Defender
 ```
-DeviceNetworkEvents
-// Define timeframe 
-| where Timestamp > ago(30d)
-| where ActionType == "SslConnectionInspected"
-| extend AdditionalFields = todynamic(AdditionalFields)
-| extend issuer = tostring(AdditionalFields.issuer), subject = tostring(AdditionalFields.subject), direction = tostring(AdditionalFields.direction)
-| where direction == "Out" and not(ipv4_is_private(RemoteIP))
-// Define issuer and subject parameters
-| where AdditionalFields.issuer has_any ("AsyncRAT Server", "Major Cobalt Strike" "Laplas.app") or AdditionalFields.subject has_any ("AsyncRAT Server", "Major Cobalt Strike", "Quasar Server CA", "Laplas.app", "Mythic", "DcRat", "VenomRAT", "BitRAT")
-| sort by Timestamp desc 
+let CompromizedEmailAddress = ""; // Insert the email address of the compromised email address
+let Timeframe = 2d; // Choose the best timeframe for your investigation
+let EmailInformation = EmailEvents
+    | where RecipientEmailAddress == CompromizedEmailAddress
+    | where Timestamp > ago(Timeframe)
+    | where DeliveryAction != "Blocked"
+    | where AttachmentCount != "0"
+    | project Timestamp, NetworkMessageId, SenderMailFromAddress, SenderFromAddress, SenderDisplayName, ThreatNames;
+EmailInformation
+    | join (EmailAttachmentInfo
+    | project NetworkMessageId, FileName, FileType, FileSize
+) on NetworkMessageId
+| sort by Timestamp desc
 ```
 
 ### Versioning
