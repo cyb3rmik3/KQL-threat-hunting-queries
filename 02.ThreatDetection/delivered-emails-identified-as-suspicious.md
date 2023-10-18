@@ -28,3 +28,4 @@ EmailInformation
 | Version       | Date          | Comments                               |
 | ------------- |---------------| ---------------------------------------|
 | 1.0           | 03/10/2023    | Initial publish                        |
+| 1.1           | 18/10/2023    | Missing Timestamp                      |
