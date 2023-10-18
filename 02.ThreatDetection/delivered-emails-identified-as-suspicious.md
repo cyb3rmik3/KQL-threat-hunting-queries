@@ -13,6 +13,7 @@ let CompromizedEmailAddress = ""; // Insert the email address of the compromised
 let Timeframe = 2d; // Choose the best timeframe for your investigation
 let EmailInformation = EmailEvents
     | where RecipientEmailAddress == CompromizedEmailAddress
+    | where Timestamp > ago(Timeframe)
     | where DeliveryAction != "Blocked"
     | project Timestamp, NetworkMessageId, SenderMailFromAddress, SenderFromAddress, SenderDisplayName, ThreatNames;
 EmailInformation
