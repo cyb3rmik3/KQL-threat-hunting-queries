@@ -2,7 +2,7 @@
 
 ## Description
 
-Following a challening request from a fellow Microsoft Tech Community member, the query below will help you detect inbound emails which match the domains provided from a public text file. It also allows to exclude specific domains, if required.
+Following a challenging request from a fellow Microsoft Tech Community member, the query below will help you detect inbound emails which match the domains provided from a public text file. It also allows to exclude specific domains, if required.
 
 ### References
 - https://techcommunity.microsoft.com/t5/microsoft-defender-xdr/365-advance-hunting/m-p/3937681
