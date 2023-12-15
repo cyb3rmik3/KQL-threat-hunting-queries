@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query will identify how much time has occured since a confirmed compromised account, changed password.
+The following query will identify how much time has occurred since a confirmed compromised account, changed password.
 
 ### Microsoft Sentinel
 ```
