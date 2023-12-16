@@ -1,3 +1,9 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 # Threat hunting/detecting using KQL queries [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=KQL%20Threat%20Hunting%20Queries%20by%20@cyb3rmik3&url=https://github.com/cyb3rmik3/KQL-threat-hunting-queries)
 ```
   _  _____  _       _____ _   _ ____  _____    _  _____   _   _ _   _ _   _ _____ ___ _   _  ____ 
@@ -30,6 +36,8 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 - [Configure Azure Sentinel environment](https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/)
 
 # KQL Basics
+
+
 
 ### Choose appropriate table
 Data is organized into a hierarchy of databases, tables and columns, similar to SQL. For example, the DeviceNetworkEvents table in the advanced hunting schema contains information about network connections and related events. 
