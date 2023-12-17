@@ -1,6 +1,7 @@
 # Threat hunting/detecting using KQL queries
 
-[![Share on X](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=KQL%20Threat%20Hunting%20Queries%20by%20@cyb3rmik3&url=https://github.com/cyb3rmik3/KQL-threat-hunting-queries) ![Follow @cyb3rmik3](https://img.shields.io/twitter/follow/cyb3rmik3)
+[![Share on X](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=KQL%20Threat%20Hunting%20Queries%20by%20@cyb3rmik3&url=https://github.com/cyb3rmik3/KQL-threat-hunting-queries) [![Follow @cyb3rmik3](https://img.shields.io/twitter/follow/cyb3rmik3)](https://twitter.com/cyb3rmik3)
+
 ```
   _  _____  _       _____ _   _ ____  _____    _  _____   _   _ _   _ _   _ _____ ___ _   _  ____ 
  | |/ / _ \| |     |_   _| | | |  _ \| ____|  / \|_   _| | | | | | | | \ | |_   _|_ _| \ | |/ ___|
