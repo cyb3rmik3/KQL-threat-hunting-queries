@@ -17,6 +17,7 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | [MOVEit exploit hunting](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/MOVEit-exploit-hunting.md)      | T1623 | 09/06/2023 | 09/06/2023 |
 | [PowerShell Base64 encoding](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/powershell-base64-encoding.md)   | T1059.001 | 14/08/2023 | 14/08/2023 |
 | [CVE-2023-36884 WinRAR spawning CMD](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/CVE-2023-38831-winrar-spawning-cmd.md)      | T1059.001 | 10/09/2023 | 10/09/2023 |
+| [Chcanging PowerShell execution policy to insecure leve](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/changing-powershell-execution-policy-to-insecure-level.md)      | T1059.001 | 24/12/2023 | 24/12/2023 |
 
 ### Privilege escalation
 
