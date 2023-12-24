@@ -98,5 +98,7 @@ The KQL queries in this GitHub repository are provided for informational purpose
 ### Roadmap
 
 - [ ] Add description for query kategories
+- [ ] Add KQLCafe
+- [ ] Add https://kustoinsights.substack.com/
 - [ ] Add KQLSearch.com as community and replace KQL contributors
 - [ ] Add trainings: Rod Trend's book and https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts
