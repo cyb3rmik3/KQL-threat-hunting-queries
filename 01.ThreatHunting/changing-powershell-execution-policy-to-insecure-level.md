@@ -1,4 +1,4 @@
-# Chcanging PowerShell execution policy to insecure level
+# Changing PowerShell execution policy to insecure level
 
 ### Description
 
