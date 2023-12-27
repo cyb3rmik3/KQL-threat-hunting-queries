@@ -100,6 +100,7 @@ Contributing and sharing within the community is paramount as it fosters a colla
 ### Bookmarks
 - [KQL Cafe](https://github.com/KQLCafe/website/blob/gh-pages/index.md)
 - [Kusto Insights Newsletter](https://kustoinsights.substack.com/)
+- [KQL Query Blog](https://kqlquery.com/)
 - [KustoKing](https://www.kustoking.com/)
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
 - [seccnet](https://github.com/secnnet/Microsoft-365-Defender-Hunting-Queries/blob/main/Top%20Hunting%20Queries.txt)
