@@ -25,16 +25,22 @@ Enjoy, and please reach out for any concerns and suggestions: [cyb3rmik3](https:
 
 # KQL Training
 
-## Microsoft Security Operations Analyst Associate (SC-200)
+### Microsoft Security Operations Analyst Associate (SC-200)
 If Microsoft Sentinel and Microsoft 365 Defender are your daily to-go tools, you should consider following Microsoft's Certified Security Operations Analyst course (Exam code [SC-200](https://learn.microsoft.com/en-us/certifications/exams/sc-200/)). You will be acquainted with Microsoft's wide range of Security products and how you can use them to provide data, security signal and analyze alerts and incidents.
 
 Be that as it may, you can jump into Microsoft's course that focus on KQL:
 - [Utilize KQL for Azure Sentinel](https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/)
 - [Configure Azure Sentinel environment](https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/)
 
+### Hands-On KQL for Threat Hunting and Detection Engineering
+
+Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the blu raven academy where he offers the ["Hands-On KQL for Threat Hunting and Detection Engineering"](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts) KQL training course, including hands-on experience in a hyper-realistic lab environment.
+
+### Rod Trent's MustLearnKQL
+
+[Rod Trent](https://github.com/rod-trent) created the [MustLearnKQL](https://github.com/rod-trent/MustLearnKQL) series which is a set of blog posts and Youtube videos comprising an effort to discuss and educate about the power and simplicity of the Kusto Query Language.
+
 # KQL Basics
-
-
 
 ### Choose appropriate table
 Data is organized into a hierarchy of databases, tables and columns, similar to SQL. For example, the DeviceNetworkEvents table in the advanced hunting schema contains information about network connections and related events. 
@@ -105,4 +111,3 @@ The KQL queries in this GitHub repository are provided for informational purpose
 ### Roadmap
 
 - [ ] Add description for query kategories
-- [ ] Add trainings: Rod Trend's book and https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts
