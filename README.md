@@ -40,6 +40,10 @@ Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the bl
 
 [Rod Trent](https://github.com/rod-trent) created the [MustLearnKQL](https://github.com/rod-trent/MustLearnKQL) series which is a set of blog posts and Youtube videos comprising an effort to discuss and educate about the power and simplicity of the Kusto Query Language.
 
+### Incident Response in the Microsoft Cloud
+
+[Invictus](https://github.com/invictus-ir) created the [Incident Response in the Microsoft Cloud](https://academy.invictus-ir.com/advanced-incident-response-in-the-microsoft-cloud) training which covers how to do incident response in Microsoft Azure and Microsoft 365. This includes KQL basics, but also KQL querypacks and more advanced use cases and KQL queries for cloud attacks. 
+
 # KQL Basics
 
 ### Choose appropriate table
