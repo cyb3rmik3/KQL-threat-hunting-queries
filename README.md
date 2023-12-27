@@ -83,10 +83,17 @@ The approach to hunting has two components: Characterization of malicious activi
   <img src="https://images2.imgbox.com/e1/d9/lk1g8EPX_o.jpg">
 </p>
 
-# Bookmarked Security KQL contributors
-- [Bert-Jan](https://github.com/Bert-JanP)
-- [Matt Zorich](https://github.com/reprise99)
-- [Kijo](https://github.com/LearningKijo)
+# KQL Community
+
+Contributing and sharing within the community is paramount as it fosters a collaborative environment where we all can exchange insights, challenges, and collectively advance our expertise. Following, you will find some of my bookmarked community resources.
+
+### KQL Search
+
+[KQL Search](https://www.kqlsearch.com/) is a project created by [Ugur Koc](https://github.com/ugurkocde) which aggregates GitHub repos from KQL community members that contribute queries for Microsoft Sentinel and Microsoft Defender XDR. This repo is also included along with other respectful members effort to build better defenses with the Microsoft Security stack.
+
+### Bookmarks
+- [KQL Cafe](https://github.com/KQLCafe/website/blob/gh-pages/index.md)
+- [Kusto Insights Newsletter](https://kustoinsights.substack.com/)
 - [KustoKing](https://www.kustoking.com/)
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
 - [seccnet](https://github.com/secnnet/Microsoft-365-Defender-Hunting-Queries/blob/main/Top%20Hunting%20Queries.txt)
@@ -98,7 +105,5 @@ The KQL queries in this GitHub repository are provided for informational purpose
 ### Roadmap
 
 - [ ] Add description for query kategories
-- [ ] Add KQLCafe
-- [ ] Add https://kustoinsights.substack.com/
 - [ ] Add KQLSearch.com as community and replace KQL contributors
 - [ ] Add trainings: Rod Trend's book and https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts
