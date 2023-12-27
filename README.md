@@ -15,7 +15,7 @@ This repository is an effort to provide ready-made detection and hunting queries
 - [KQL Training](#kql-training)
 - [KQL Basics](#kql-basics)
 - [Threat Hunting Basics](#threat-hunting-basics)
-- [Bookmarked Security KQL contributors](#bookmarked-security-kql-contributors)
+- [KQL Community](#kql-community)
 
 Please:
 - Read the [Disclaimer](#disclaimer) below.
@@ -105,5 +105,4 @@ The KQL queries in this GitHub repository are provided for informational purpose
 ### Roadmap
 
 - [ ] Add description for query kategories
-- [ ] Add KQLSearch.com as community and replace KQL contributors
 - [ ] Add trainings: Rod Trend's book and https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts
