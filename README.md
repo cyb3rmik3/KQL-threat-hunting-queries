@@ -109,10 +109,5 @@ Contributing and sharing within the community is paramount as it fosters a colla
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
 - [seccnet](https://github.com/secnnet/Microsoft-365-Defender-Hunting-Queries/blob/main/Top%20Hunting%20Queries.txt)
 
-# Disclaimer
-
-The KQL queries in this GitHub repository are provided for informational purposes only. Users are solely responsible for their usage and should exercise caution. It is advised to thoroughly understand and test the queries before implementing them in a production environment.
-
-### Roadmap
-
-- [ ] Add description for query kategories
+> [!WARNING]  
+> The KQL queries in this GitHub repository are provided for informational purposes only. Users are solely responsible for their usage and should exercise caution. It is advised to thoroughly understand and test the queries before implementing them in a production environment.
