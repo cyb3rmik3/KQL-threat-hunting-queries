@@ -23,6 +23,7 @@ Please:
 
 Enjoy, and please reach out for any concerns and suggestions: [cyb3rmik3](https://twitter.com/Cyb3rMik3).
 
+---
 # KQL Training
 
 ### Microsoft Security Operations Analyst Associate (SC-200)
@@ -44,6 +45,7 @@ Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the bl
 
 [Invictus](https://github.com/invictus-ir) created the [Incident Response in the Microsoft Cloud](https://academy.invictus-ir.com/advanced-incident-response-in-the-microsoft-cloud) training which covers how to do incident response in Microsoft Azure and Microsoft 365. This includes KQL basics, but also KQL querypacks and more advanced use cases and KQL queries for cloud attacks. 
 
+---
 # KQL Basics
 
 ### Choose appropriate table
@@ -80,6 +82,7 @@ DeviceNetworkEvents
 | project Timestamp, ActionType, RemoteIP, RemotePort, RemoteUrl
 ```
 
+---
 # Threat Hunting Basics
 ## Microsoft Threat Hunting
 Threat hunting should be a continual process. We start at the top of our cycle with our Hypothesis. Our Hypothesis helps us plan out what we are going to hunt for, which requires us to understand where we're going to hunt and how we'll do it. This means we need to understand the data we have, the tools we have, the expertise we have, and how to work with them. The hunting cycle doesn't stop when we execute the hunt. There are still several phases we need to conduct throughout the life cycle, including responding to anomalies. Even if we don't find an active threat, there will be activities to perform. [More](https://learn.microsoft.com/en-us/training/paths/sc-200-perform-threat-hunting-azure-sentinel/).
@@ -93,6 +96,7 @@ The approach to hunting has two components: Characterization of malicious activi
   <img src="https://images2.imgbox.com/e1/d9/lk1g8EPX_o.jpg">
 </p>
 
+---
 # KQL Community
 
 Contributing and sharing within the community is paramount as it fosters a collaborative environment where we all can exchange insights, challenges, and collectively advance our expertise. Following, you will find some of my bookmarked community resources.
@@ -109,5 +113,6 @@ Contributing and sharing within the community is paramount as it fosters a colla
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
 - [seccnet](https://github.com/secnnet/Microsoft-365-Defender-Hunting-Queries/blob/main/Top%20Hunting%20Queries.txt)
 
+---
 > [!WARNING]  
 > The KQL queries in this GitHub repository are provided for informational purposes only. Users are solely responsible for their usage and should exercise caution. It is advised to thoroughly understand and test the queries before implementing them in a production environment.
