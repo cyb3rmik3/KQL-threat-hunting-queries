@@ -35,11 +35,16 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 
 ### Hands-On KQL for Threat Hunting and Detection Engineering
 
-Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the blu raven academy where he offers the ["Hands-On KQL for Threat Hunting and Detection Engineering"](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts) KQL training course, including hands-on experience in a hyper-realistic lab environment.
+Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the blu raven academy where he offers the ["Hands-On KQL for Threat Hunting and Detection Engineering"](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts) and [Hands-On Kusto Query Language (KQL) for Security Analysts](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts) KQL training courses, including hands-on experience in a hyper-realistic lab environment.
 
 ### Rod Trent's MustLearnKQL
 
 [Rod Trent](https://github.com/rod-trent) created the [MustLearnKQL](https://github.com/rod-trent/MustLearnKQL) series which is a set of blog posts and Youtube videos comprising an effort to discuss and educate about the power and simplicity of the Kusto Query Language.
+
+### CTF-a-like learning
+
+- [KC7 Cyber](https://kc7cyber.com/) is a new way to learn cybersecurity that's hands-on, fun, and engaging.
+- [Kusto Detective Agency](https://detective.kusto.io/) is a set of challenges that is designed to help you learn the KQL.
 
 ### Incident Response in the Microsoft Cloud
 
@@ -112,6 +117,7 @@ Contributing and sharing within the community is paramount as it fosters a colla
 - [KustoKing](https://www.kustoking.com/)
 - [Ashwin Patil](https://github.com/ashwin-patil/blue-teaming-with-kql)
 - [seccnet](https://github.com/secnnet/Microsoft-365-Defender-Hunting-Queries/blob/main/Top%20Hunting%20Queries.txt)
+- [ml58158, Demystiftying KQL](https://github.com/ml58158/Demystifying-KQL/)
 
 ---
 > [!WARNING]  
