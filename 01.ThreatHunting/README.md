@@ -8,6 +8,12 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 
 ## Queries mapped on MITRE ATT&CK
 
+### Initial Access
+
+| Title        | Technique ID           | Date added  | Last update |
+|---------------|---------------|-------|-------|
+| [Spamhaus 10 Most Abused TLDs](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/Spamhaus-10-most-abused-tlds.md)      | T1566 | 21/01/2024 | 21/01/2024 |
+
 ### Execution
 
 | Title        | Technique ID           | Date added  | Last update |
