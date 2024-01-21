@@ -10,7 +10,7 @@ The following query will hunt for inbound emails with SenderMailFromDomain and S
 
 ### Microsoft Defender XDR
 ```
-let SpamhausTLD = externaldata(TLD: string)[@"https://raw.githubusercontent.com/cyb3rmik3/THunting-Lists/blob/main/spamhaus-abused-tlds.csv"] with (format="csv", ignoreFirstRecord=True);
+let SpamhausTLD = externaldata(TLD: string)[@"https://raw.githubusercontent.com/cyb3rmik3/Hunting-Lists/blob/main/spamhaus-abused-tlds.csv"] with (format="csv", ignoreFirstRecord=True);
 let Timeframe = 1d; // Choose the best timeframe for your investigation
 let SMFDEvents = EmailEvents
  | where Timestamp > ago(Timeframe)
