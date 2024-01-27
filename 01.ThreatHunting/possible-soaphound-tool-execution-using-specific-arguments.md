@@ -11,7 +11,6 @@ SOAPHound is a custom-developed .NET data collector tool which can be used to en
 ### Microsoft Defender XDR & Sentinel
 ```
 DeviceProcessEvents
-| where FileName has_any (@"powershell.exe", @"pwsh.exe", @"powershell_ise.exe")
 | where ProcessCommandLine has_any (" --buildcache "," --bhdump ", " --certdump "," --dnsdump ")
   and ProcessCommandLine has_any (" -c "," --cachefilename ", " -o "," --outputdirectory")
 ```
