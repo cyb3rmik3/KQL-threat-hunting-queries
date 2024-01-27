@@ -45,6 +45,7 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 | Title        | Technique ID           | Date added  | Last update |
 |---------------|---------------|-------|-------|
 | [Remcos RAT checking for geolocation through web](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/remcos-rat-checking-for-geolocation.md)      | T1614 | 08/06/2023 | 08/06/2023 |
+| [Possible SOAPHound Tool execution using specific arguments](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/possible-soaphound-tool-execution-using-specific-arguments.md)      | T1087 | 27/01/2024 | 27/01/2024 |
 
 ### Command and Control
 
