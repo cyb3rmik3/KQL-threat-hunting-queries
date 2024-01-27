@@ -2,7 +2,7 @@
 
 ## Description
 
-Recent rise of Remote Monitoring and Management (RMM) tools used by prominent Threat Actors for lateral movement and command and control (C2) has led to significantly getting worried about the use of legitimate software such as Teamviewer, NetSupport Manager etc. The following query has been crafted to utilize the processversioninfocompanymame table with a hunting list created by installing and testing corresponding tools.
+Recent rise of Remote Monitoring and Management (RMM) tools used by prominent Threat Actors for lateral movement and command and control (C2) has led to significantly getting worried about the use of legitimate software such as Teamviewer, NetSupport Manager etc. The following query has been crafted to utilize the ProcessVersionInfoCompanyName table with a hunting list created by installing and testing corresponding tools.
 
 ### References
 - https://www.michalos.net/2023/11/27/detecting-rmm-tools-using-microsoft-defender-for-endpoint/
