@@ -10,6 +10,9 @@
  |_|\_\__\_|_____|   |_| |_| |_|_| \_|_____/_/   \_|_|   |_| |_|\___/|_| \_| |_| |___|_| \_|\____|
                                                                                                          
 ```                                                                                             
+
+> [!NOTE]  
+> Jan. 27th: After almost a year of contributions, this repository is undergoing a heavy rebuild to meet the current community landscape and also, a far more better contextualization in order to keep contributing.
                                                                                              
 This repository is an effort to provide ready-made detection and hunting queries (and more) in order to help analysts and threat hunters harness the power of KQL in Microsoft Sentinel and Microsoft Defender XDR. 
 - [KQL Training](#kql-training)
