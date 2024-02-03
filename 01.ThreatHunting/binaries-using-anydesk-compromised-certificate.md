@@ -35,4 +35,4 @@ SuspiciousAnydeskFileCertificate
 ### Versioning
 | Version       | Date          | Comments                          |
 | ------------- |---------------| ----------------------------------|
-| 1.0           | 02/03/2024    | Initial publish                   |
+| 1.0           | 03/02/2024    | Initial publish                   |
