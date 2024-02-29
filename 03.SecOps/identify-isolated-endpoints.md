@@ -1,8 +1,8 @@
-# Identify contained endpoints
+# Identify isolated endpoints
 
 ## Description
 
-The following query will return endpoints which have been contained by looking into relevant registry modifications.
+The following query will return endpoints which have been isolated by looking into relevant registry modifications.
 
 ### Microsoft Defender XDR
 ```
@@ -20,3 +20,4 @@ DeviceRegistryEvents
 | Version       | Date          | Comments                               |
 | ------------- |---------------| ---------------------------------------|
 | 1.0           | 24/02/2024    | Initial publish                        |
+| 1.1           | 29/02/2024    | Change contain to isolate, thanks to Alex Verboon |
