@@ -7,7 +7,7 @@ The following queries provide for Microsoft Sentinel and Microsoft 365 Defender 
 ## References
 - https://attack.mitre.org/techniques/enterprise/
 
-### Microsoft 365 Defender
+### Microsoft Defender XDR
 ```
 AlertInfo
 // Define timerange
