@@ -38,7 +38,10 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 
 ### Hands-On KQL for Threat Hunting and Detection Engineering
 
-Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the blu raven academy where he offers the ["Hands-On KQL for Threat Hunting and Detection Engineering"](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts) and [Hands-On Kusto Query Language (KQL) for Security Analysts](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts) KQL training courses, including hands-on experience in a hyper-realistic lab environment.
+Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the blu raven academy where he offers the following KQL training courses, including hands-on experience in a hyper-realistic lab environment.
+- ["Introduction to KQL for Security Analysis (FREE)"](https://academy.bluraven.io/intro-to-kql-for-security-analysis)
+- ["Hands-On KQL for Threat Hunting and Detection Engineering"](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts)
+- [Hands-On Kusto Query Language (KQL) for Security Analysts](https://academy.bluraven.io/hands-on-kusto-query-language-kql-for-security-analysts) 
 
 ### Rod Trent's MustLearnKQL
 
