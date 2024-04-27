@@ -16,8 +16,8 @@ DeviceInfo
 | extend MitigationStatusObject = parse_json(MitigationStatus)
 | mv-expand MitigationStatusObject
 | extend IsolationStatus = MitigationStatusObject.Isolated
-| where IsolationStatus == ""
-| distinct DeviceId, DeviceName, OSPlatform, LoggedOnUsername, LoggedOnDomainName, Isolation = "No"
+| where IsolationStatus == "true"
+| distinct DeviceId, DeviceName, OSPlatform, LoggedOnUsername, LoggedOnDomainName, Isolation = "Yes"
 ```
 
 ### Versioning
