@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query will leverage the DeviceInfo table and identify endpoints where MitigationStatus Isolation equals true. It will also the logged on UsernName and Domain.
+The following query will leverage the DeviceInfo table and identify endpoints where MitigationStatus Isolation equals true. It will also the logged on UserName and Domain.
 
 ### Microsoft Defender XDR
 ```
