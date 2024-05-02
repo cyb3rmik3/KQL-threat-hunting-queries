@@ -5,7 +5,7 @@
 The following query will leverage the DeviceInfo table and identify endpoints where MitigationStatus Isolation equals true. It will also the logged on UserName and Domain.
 
 ### Microsoft Defender XDR
-```
+
 ```
 let Timeframe = 4h; // Choose the best timeframe for your investigation
 DeviceInfo
