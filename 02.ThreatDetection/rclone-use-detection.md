@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query will detect execution of the Rclone command-line program.
+The following query will detect execution of the Rclone command-line program which is related to ransomware exfiltration activity.
 
 ### References
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/ransomware-data-exfiltration
