@@ -16,6 +16,7 @@ WSLDevices
     | where SoftwareName has "microsoft_defender_for_endpoint_plug-in_for_wsl"
     | project DeviceName
 ) on DeviceName
+| distinct DeviceName
 ```
 
 ### Versioning
