@@ -1,4 +1,4 @@
-# Crowdstrike sispicious domains
+# Crowdstrike suspicious domains
 
 ### Description
 
