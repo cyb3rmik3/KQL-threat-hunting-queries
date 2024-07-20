@@ -7,7 +7,7 @@ Following Crowdstrike incident that paralyzed IT systems throughout the world, t
 ### References
 - https://www.pcmag.com/news/dont-fall-for-it-hackers-pounce-on-crowdstrike-outage-with-phishing-emails
 
-### Microsoft 365 Defender & Microsoft Sentinel
+### Microsoft XDR & Microsoft Sentinel
 
 #### EmailUrlInfo
 ```
