@@ -18,7 +18,7 @@ ExposureGraphEdges
 ### MITRE ATT&CK Mapping
 - Tactic: Persistence
 - Technique ID: T1098
-- [Account Manipulation](https://attack.mitre.org/techniques/T1204/001/)
+- [Account Manipulation](https://attack.mitre.org/techniques/T1098/)
 
 ### Source
 - Exposure Management
