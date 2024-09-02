@@ -36,6 +36,10 @@ Be that as it may, you can jump into Microsoft's course that focus on KQL:
 - [Utilize KQL for Azure Sentinel](https://learn.microsoft.com/en-us/training/paths/sc-200-utilize-kql-for-azure-sentinel/)
 - [Configure Azure Sentinel environment](https://learn.microsoft.com/en-us/training/paths/sc-200-configure-azure-sentinel-environment/)
 
+### Create queries in advanced mode
+The Microsoft Defender XDR advanced hunting expert training provides a comprehensive guide for security analysts and threat hunters to enhance their skills in advanced hunting. The training is delivered through a series of webcasts titled “Tracking the Adversary” and “L33TSP3AK”.
+- [Get expert training on advanced hunting](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-expert-training)
+
 ### Hands-On KQL for Threat Hunting and Detection Engineering
 
 Mehmet Ergene (aka the [cyb3rmonk](https://twitter.com/cyb3rmonk) founded the blu raven academy where he offers the following KQL training courses, including hands-on experience in a hyper-realistic lab environment.
