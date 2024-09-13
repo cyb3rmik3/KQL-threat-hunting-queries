@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query leverages DeviceTvmCertificateInfo table which is available at the Threat and Vulnerability Management (TVM) add-on license. Results provided include endpoints with certificates of 0 keysize and no signature algorithm. A detected certificate lacks all the fundamental properties needed for secure communication and should be investigated. 
+The following query leverages DeviceTvmCertificateInfo table which is available at the MDVM add-on license. Results provided include endpoints with certificates of zero keysize and no signature algorithm. A detected certificate lacks all the fundamental properties needed for secure communication and should be investigated.
 
 ### Microsoft Defender XDR
 ```
