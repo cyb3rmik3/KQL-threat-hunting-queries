@@ -1,4 +1,4 @@
-# Detect inbound email domains from text list
+# Detecting Rmm Tools Using Processversioninfocompanymame Table
 
 ## Description
 
