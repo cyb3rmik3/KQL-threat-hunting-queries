@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query leverages DeviceTvmSecureConfigurationAssessment which is available at the Microsoft Defender Vulnerability Management (MDVM) add-on license. Results provided include network shares with write permissions set to Everyone in highly exposed devices.
+The following query leverages DeviceTvmSecureConfigurationAssessment table which is available at the Microsoft Defender Vulnerability Management (MDVM) add-on license. Results provided include network shares with write permissions set to Everyone in highly exposed devices.
 
 ### Microsoft Defender XDR
 ```
