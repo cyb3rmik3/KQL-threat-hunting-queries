@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query leverages DeviceTvmSecureConfigurationAssessment table which is available at the Microsoft Defender Vulnerability Management (MDVM) add-on license. Results provided include network shares with write permissions set to Everyone in highly exposed devices.
+The following query leverages DeviceTvmSecureConfigurationAssessment table and specifically ConfigurationId "scid-4001" (Remove share write permission set to "Everyone"), a weakness which is available at the Microsoft Defender Vulnerability Management (MDVM) add-on license. Results provided include network shares with write permissions set to Everyone in highly exposed devices.
 
 ### Microsoft Defender XDR
 ```
@@ -31,3 +31,4 @@ union DevVulNetShares, DeviceInformation
 | Version       | Date          | Comments                               |
 | ------------- |---------------| ---------------------------------------|
 | 1.0           | 06/10/2024    | Initial publish                        |
+| 1.0           | 20/10/2024    | Description refinement                 |
