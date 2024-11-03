@@ -2,7 +2,7 @@
 
 ### Description
 
-This query is a hunting opportunity following Microsoft's threat intelligence report on Midnight Blizzard spear-phishing campaigns using RDP files. This query will identify *.rdp file creation in Outlook's temprary folders and covers both Windows 10 and Windows 11 OS endponts.
+This query is a hunting opportunity following Microsoft's threat intelligence report on Midnight Blizzard spear-phishing campaigns using RDP files. This query will identify *.rdp file creation in Outlook's temporary folders and covers both Windows 10 and Windows 11 OS endpoints.
 
 ### References
 - https://www.microsoft.com/en-us/security/blog/2024/10/29/midnight-blizzard-conducts-large-scale-spear-phishing-campaign-using-rdp-files/
