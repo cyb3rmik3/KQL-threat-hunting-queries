@@ -41,3 +41,4 @@ union SuspiciousRdpFilesinOutlookWin10,
 | Version       | Date          | Comments                          |
 | ------------- |---------------| ----------------------------------|
 | 1.0           | 03/11/2024    | Initial publish                   |
+| 1.1           | 04/11/2024    | Description update                |
