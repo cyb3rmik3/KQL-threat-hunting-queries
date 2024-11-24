@@ -2,7 +2,7 @@
 
 ## Description
 
-If you are aggregating a MISP instance for your threat intelligence feed in Microsoft Sentinel (or Unified SecOps, then your ThreatIntelligenceIndicator table will be able to provide some fruitful numbers on how your MISP is overall cotnributing. The following queries will allow you an overall better understanding of your MISP feed.
+If you are aggregating a MISP instance for your threat intelligence feed in Microsoft Sentinel (or Unified SecOps, then your ThreatIntelligenceIndicator table will be able to provide some fruitful numbers on how your MISP is overall contributing. The following queries are some ideas that will allow you an overall better understanding of your MISP feed.
 
 ### Microsoft Sentinel
 ```
