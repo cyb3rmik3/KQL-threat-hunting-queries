@@ -1,8 +1,8 @@
-# Leveraging abuse.ch DROP list to identify delivered emails from suspicious source IPs
+# Leveraging Spamhaus DROP list to identify delivered emails from suspicious source IPs
 
 ## Description
 
-The following query leverages abuse.ch Don't Route Or Peer Lists (DROP) to identify delivered emails from suspicious source IPs. While most probably communications from these IP blocks will be marked as spam, using this query will uncover any delivered emails from DROP lists.
+The following query leverages Spamhaus Don't Route Or Peer Lists (DROP) to identify delivered emails from suspicious source IPs. While most probably communications from these IP blocks will be marked as spam, using this query will uncover any delivered emails from DROP lists.
 - Reference: https://www.spamhaus.org/blocklists/do-not-route-or-peer/
 
 ### Microsoft Defender XDR
