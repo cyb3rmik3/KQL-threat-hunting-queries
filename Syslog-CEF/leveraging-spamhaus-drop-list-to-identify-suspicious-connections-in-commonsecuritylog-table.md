@@ -1,8 +1,8 @@
-# Leveraging abuse.ch DROP list to identify suspicious connections in CommonSecurityLog table
+# Leveraging Spamhaus DROP list to identify suspicious connections in CommonSecurityLog table
 
 ## Description
 
-The following query leverages abuse.ch Don't Route Or Peer Lists (DROP) to identify suspicious connections in CommonSecurityLog table. Based on the security controls onboarded your Unified Security Operations, this will allow to search for outgoing suspicious connections accross your estate.
+The following query leverages Spamhaus Don't Route Or Peer Lists (DROP) to identify suspicious connections in CommonSecurityLog table. Based on the security controls onboarded your Unified Security Operations, this will allow to search for outgoing suspicious connections accross your estate.
 - Reference: https://www.spamhaus.org/blocklists/do-not-route-or-peer/
 
 ### Microsoft Defender XDR
