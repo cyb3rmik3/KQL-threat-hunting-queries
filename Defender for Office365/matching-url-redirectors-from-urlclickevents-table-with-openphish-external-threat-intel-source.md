@@ -1,4 +1,4 @@
-# Matching redirectors from UrlClickEvents table with OpenPhish external threat intel source
+# Matching URL redirectors from UrlClickEvents table with OpenPhish external threat intel source
 
 ## Description
 
