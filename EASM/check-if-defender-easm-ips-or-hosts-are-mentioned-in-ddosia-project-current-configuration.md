@@ -1,8 +1,8 @@
-# Check if EASM IPs or Hosts are mentioned in DDosia Project current configuration
+# Check if Defender EASM IPs or Hosts are mentioned in DDosia Project current configuration
 
 ## Description
 
-The following query will check the DDoSia latest configuration to match IPs and Domains that are part of organization's EASM. As a prerequisite, EASM logs should be ingested in Microsoft Sentinel.
+The following query will check the DDoSia latest configuration to match IPs and Domains that are part of organization's EASM. As a prerequisite, Defender EASM logs should be ingested in Microsoft Sentinel.
 
 ### References
 - https://witha.name/
