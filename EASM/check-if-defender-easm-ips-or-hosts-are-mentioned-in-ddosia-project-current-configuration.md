@@ -2,7 +2,7 @@
 
 ## Description
 
-The following query will check the DDoSia latest configuration to match IPs and Domains that are part of organization's EASM. As a prerequisite, Defender EASM logs should be ingested in Microsoft Sentinel.
+The following query will check the DDoSia latest configuration to match IPs and Domains that are part of organization's Defender EASM. As a prerequisite, Defender EASM connector should be enabled in Microsoft Sentinel.
 
 ### References
 - https://witha.name/
