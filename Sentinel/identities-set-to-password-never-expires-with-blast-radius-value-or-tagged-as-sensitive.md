@@ -2,7 +2,7 @@
 
 # Description
 
-The following query will take advantage of the recently introduced IdentityInfo table and will identify enabled accounts that are set with no password expiration that either have a Blast Radius value or are ragged as Sensitive. Results will return accounts that should be further investigated whether the pose a risk or not.
+The following query will take advantage of the recently introduced IdentityInfo table and will identify enabled accounts that are set with no password expiration that either have a Blast Radius value or are tagged as Sensitive. Results will return accounts that should be further investigated whether the pose a risk or not.
 
 ### Defender XDR
 ```
