@@ -10,7 +10,7 @@ The following query will help identify which IPs from Microsoft Defender Externa
 ### Microsoft Defender XDR
 ```
 let TIIPs = 
-    ThreatIntelIndicators
+    ThreatIntelligenceIndicator
     | extend TIIPAddress = tostring(NetworkIP)
     | where isnotempty(TIIPAddress)
     | project TIIPAddress, ThreatType, Description, ConfidenceScore;
@@ -28,4 +28,3 @@ TIIPs
 | Version       | Date          | Comments                               |
 | ------------- |---------------| ---------------------------------------|
 | 1.0           | 31/07/2025    | Initial publish                        |
-| 1.1           | 05/07/2025    | TI table replacement to new schema     |
