@@ -6,7 +6,7 @@ This query takes into account the DeviceInfo table and will provide the devices 
 
 ### References
 - https://techcommunity.microsoft.com/discussions/microsoftdefenderatp/how-to-fetch-dynamic-tags-in-defender-for-endpoint-machines-api-or-kql/4440925
-- 
+
 ### Microsoft Defender XDR
 ```
 // Define which devices are of interest based on OSPlatform value
