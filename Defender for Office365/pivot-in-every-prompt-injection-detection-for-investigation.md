@@ -2,7 +2,7 @@
 
 ## Description
 
-This query helps investigate further, once you've run (Uncover every prompt-injection detection and its disposition)[https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Defender%20for%20Office365/uncover-every-prompt-injection-detection-and-its-disposition.md].
+This query helps investigate further, once you've run (https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/Defender%20for%20Office365/uncover-every-prompt-injection-detection-and-its-disposition.md)[Uncover every prompt-injection detection and its disposition].
 
 ### Microsoft Defender XDR
 ```
