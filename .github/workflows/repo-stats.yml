@@ -1,0 +1,23 @@
+name: repo-stats
+concurrency: repo-stats
+
+on:
+  schedule:
+    # Once per day, near the end of the day (UTC), as recommended by github-repo-stats.
+    - cron: "0 23 * * *"
+  workflow_dispatch: # Allow running it manually from the Actions tab.
+
+jobs:
+  repostats:
+    name: repostats-for-kql-threat-hunting-queries
+    runs-on: ubuntu-latest
+    steps:
+      - name: run-ghrs
+        uses: jgehrcke/github-repo-stats@v1.4.2
+        with:
+          # Stats repository and data repository are the same (this repo),
+          # so `repository` is omitted. Data and reports go to the
+          # `github-repo-stats` branch.
+          ghtoken: ${{ secrets.GHRS_GITHUB_API_TOKEN }}
+          # Public HTML report URL once GitHub Pages serves the data branch.
+          ghpagesprefix: https://cyb3rmik3.github.io/KQL-threat-hunting-queries
