@@ -35,7 +35,7 @@ It is especially useful for organizations that ingest multiple TI feeds into Sen
 
 - [tifce-workbook.template.json](./tifce-workbook.template.json): ARM template for deploying the shared Sentinel workbook
 - [tifce-workbook.parameters.json](./tifce-workbook.parameters.json): Sample ARM parameters file
-- [tifce-workbook.md](./tifce-workbook.json): Source workbook JSON used to generate the ARM template
+- [tifce-workbook.json](./tifce-workbook.json): Source workbook JSON used to generate the ARM template
 - [tifcepillar1-data.md](./tifcepillar1-data.md): Pillar 1 KQL query for originality scoring
 - [tifcepillar2-data.md](./tifcepillar2-data.md): Pillar 2 KQL query for environmental relevance
 - [tifcepillar3-data.md](./tifcepillar3-data.md): Pillar 3 KQL query for signal versus noise

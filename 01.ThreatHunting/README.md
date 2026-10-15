@@ -29,7 +29,7 @@ I try to map threat hunting queries on MITRE ATT&CK framework and hence, as soon
 
 | Title        | Technique ID           | Date added  | Last update |
 |---------------|---------------|-------|-------|
-| [OneNote spawning suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/wscript-vbs-spawning-suspicious-processes.md)      | T1055.012 | 08/02/2023 | 23/05/2023 |
+| [OneNote spawning suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/onenote-spawning-suspicious-processes.md)      | T1055.012 | 08/02/2023 | 23/05/2023 |
 | [Screensaver file invoking internet access](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/screensaver-file-invoking-internet-access.md)      | T1546.002 | 08/11/2022 | 23/05/2023 |
 | [Screensaver file invoking suspicious processes](https://github.com/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/screensaver-file-invoking-suspicious-processes.md)      | T1623 | 08/11/2022 | 23/05/2023 |
 

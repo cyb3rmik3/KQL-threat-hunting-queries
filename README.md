@@ -133,5 +133,7 @@ Contributing and sharing within the community is paramount as it fosters a colla
 - [ml58158, Demystiftying KQL](https://github.com/ml58158/Demystifying-KQL/)
 
 ---
+## Disclaimer
+
 > [!WARNING]  
 > The KQL queries in this GitHub repository are provided for informational purposes only. Users are solely responsible for their usage and should exercise caution. It is advised to thoroughly understand and test the queries before implementing them in a production environment.
