@@ -12,9 +12,14 @@
 // - If 5 feeds share the IOC, it contributes 0.2 to each feed
 // - Feeds with more exclusive IOCs get higher originality scores
 
+// Indicator versions older than this are ignored; align it with the table's retention
+let TILookback = 90d;
 // Step 1: Build a deduplicated set of active IOCs per feed
 let ActiveIndicators =
     ThreatIntelIndicators
+    | where TimeGenerated > ago(TILookback)
+    // Each update writes a new row; keep only the latest version of each indicator
+    | summarize arg_max(TimeGenerated, IsActive, IsDeleted, ValidUntil, SourceSystem, ObservableKey, ObservableValue) by Id
     | where IsActive == true
       and IsDeleted == false
       and (isnull(ValidUntil) or ValidUntil > now())

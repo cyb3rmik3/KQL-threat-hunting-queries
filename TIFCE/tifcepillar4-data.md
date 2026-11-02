@@ -7,6 +7,8 @@
 // - Blend recency and IOC addition velocity into a freshness score.
 // ================================================
 let FreshnessLookback = 30d;
+// Indicator versions older than this are ignored; align it with the table's retention
+let TILookback = 90d;
 let CanonicalIOC = (iocType:string, iocValue:string) {
     strcat(tolower(trim(" ", iocType)), ":", tolower(trim(" ", iocValue)))
 };
@@ -15,6 +17,10 @@ let CanonicalIOC = (iocType:string, iocValue:string) {
 // -----------------------------
 let FeedIOCState =
     ThreatIntelIndicators
+    | where TimeGenerated > ago(TILookback)
+    // Each update writes a new row; keep only the latest version of each indicator,
+    // remembering when its first version was seen
+    | summarize arg_max(TimeGenerated, *), FirstVersionTime = min(TimeGenerated) by Id
     | where IsDeleted == false
     | where isnotempty(SourceSystem) and isnotempty(ObservableKey) and isnotempty(ObservableValue)
     | extend TIFeed = tostring(SourceSystem)
@@ -23,7 +29,7 @@ let FeedIOCState =
     | extend IOC = CanonicalIOC(IOCType, tostring(ObservableValue))
     | extend CreatedTime = coalesce(
         todatetime(column_ifexists("Created", datetime(null))),
-        TimeGenerated
+        FirstVersionTime
       )
     | extend UpdatedTime = coalesce(
         todatetime(column_ifexists("Modified", datetime(null))),

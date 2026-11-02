@@ -27,24 +27,66 @@
 // - url
 // - email-addr
 //
+// Matching:
+// - Only the latest version of each indicator is evaluated
+// - File IOCs match SHA256, SHA1 or MD5
+// - URLs are compared without scheme and trailing slash
+// - A domain IOC also matches its subdomains (evil.com matches a.evil.com)
+//
 // Required tables:
 // - ThreatIntelIndicators
 // - DeviceFileEvents
+// - DeviceProcessEvents
 // - DeviceNetworkEvents
 // - EmailUrlInfo
+// - UrlClickEvents
 // - EmailAttachmentInfo
 // - EmailEvents
+// - SigninLogs
 // - SecurityIncident
 // - SecurityAlert
 // ================================================
+// Indicator versions older than this are ignored; align it with the table's retention
+let TILookback = 90d;
+// Telemetry window when run standalone; the workbook uses its Time Range picker
+let TelemetryStart = ago(30d);
+let TelemetryEnd = now();
 let CanonicalIOC = (iocType:string, iocValue:string) {
-    strcat(tolower(trim(" ", iocType)), ":", tolower(trim(" ", iocValue)))
+    let t = tolower(trim(" ", iocType));
+    let v = tolower(trim(" ", iocValue));
+    strcat(t, ":", iff(t == "url", trim_end("/", replace_regex(v, @"^[a-z][a-z0-9+.-]*://", "")), v))
+};
+// MDE often logs RemoteUrl as a bare host, which parse_url cannot read without a scheme
+let UrlHost = (url:string) {
+    let u = trim(" ", url);
+    tostring(parse_url(iff(u contains "://", u, strcat("http://", u))).Host)
+};
+// IPv4-mapped IPv6 (::ffff:1.2.3.4) is reduced to plain IPv4
+let NormalizeIP = (ip:string) {
+    replace_regex(tolower(trim(" ", ip)), @"^::ffff:(\d+\.\d+\.\d+\.\d+)$", @"\1")
+};
+// A domain plus its parent domains, so a.b.evil.com also counts as b.evil.com and evil.com
+let DomainAndParents = (domain:string) {
+    let d = tolower(trim(" ", domain));
+    let labels = split(d, ".");
+    let n = array_length(labels);
+    set_difference(pack_array(
+        d,
+        iff(n > 2, strcat_array(array_slice(labels, -2, -1), "."), d),
+        iff(n > 3, strcat_array(array_slice(labels, -3, -1), "."), d),
+        iff(n > 4, strcat_array(array_slice(labels, -4, -1), "."), d),
+        iff(n > 5, strcat_array(array_slice(labels, -5, -1), "."), d),
+        iff(n > 6, strcat_array(array_slice(labels, -6, -1), "."), d)
+    ), dynamic([]))
 };
 // -----------------------------
 // Active TI indicators
 // -----------------------------
 let ActiveIOCs =
     ThreatIntelIndicators
+    | where TimeGenerated > ago(TILookback)
+    // Each update writes a new row; keep only the latest version of each indicator
+    | summarize arg_max(TimeGenerated, IsActive, IsDeleted, ValidUntil, SourceSystem, ObservableKey, ObservableValue) by Id
     | where IsActive == true
       and IsDeleted == false
       and (isnull(ValidUntil) or ValidUntil > now())
@@ -52,8 +94,7 @@ let ActiveIOCs =
       and isnotempty(ObservableKey)
       and isnotempty(ObservableValue)
     | extend TIFeed = tostring(SourceSystem)
-    | extend IOCTypeRaw = tostring(split(ObservableKey, ":", 0))
-    | extend IOCType = replace_regex(tolower(trim(" ", IOCTypeRaw)), @"[\[\]""']", "")
+    | extend IOCType = tolower(trim(" ", tostring(split(ObservableKey, ":")[0])))
     | where IOCType in (
         "file",
         "ipv4-addr",
@@ -68,88 +109,109 @@ let ActiveIOCs =
     | summarize by TIFeed, IOCType, IOCValue, IOC;
 // -----------------------------
 // IOC matches in XDR telemetry
-// Same logic as Pillar 2 + email address/domain
+// Same logic as Pillar 2
 // -----------------------------
 let TelemetryIOCs =
     union isfuzzy=true
     // Device file hashes
     (
         DeviceFileEvents
-        | where isnotempty(SHA256) or isnotempty(SHA1)
-        | extend IOCs = pack_array(
-            iff(isnotempty(SHA256), CanonicalIOC("file", SHA256), ""),
-            iff(isnotempty(SHA1), CanonicalIOC("file", SHA1), "")
-        )
-        | mv-expand IOC = IOCs to typeof(string)
-        | where isnotempty(IOC)
-        | extend TelemetrySource = "DeviceFileEvents"
-        | project IOC, TelemetrySource
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
+        | summarize Hits = count() by SHA256, SHA1, MD5 = tostring(column_ifexists("MD5", ""))
+        | mv-expand IOCValue = pack_array(SHA256, SHA1, MD5) to typeof(string)
+        | project IOCType = "file", IOCValue, Hits, TelemetrySource = "DeviceFileEvents"
+    ),
+    // Executed process hashes
+    (
+        DeviceProcessEvents
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
+        | summarize Hits = count() by SHA256, SHA1, MD5 = tostring(column_ifexists("MD5", ""))
+        | mv-expand IOCValue = pack_array(SHA256, SHA1, MD5) to typeof(string)
+        | project IOCType = "file", IOCValue, Hits, TelemetrySource = "DeviceProcessEvents"
     ),
     // Device network IPs, IPv6, network-traffic, URLs, and domains
     (
         DeviceNetworkEvents
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
         | where isnotempty(RemoteIP) or isnotempty(RemoteUrl)
-        | extend UrlHost = iff(isnotempty(RemoteUrl), tostring(parse_url(RemoteUrl).Host), "")
-        | extend RemoteIPType = iff(RemoteIP contains ":", "ipv6-addr", "ipv4-addr")
-        | extend IOCs = pack_array(
-            iff(isnotempty(RemoteIP), CanonicalIOC(RemoteIPType, RemoteIP), ""),
-            iff(isnotempty(RemoteIP), CanonicalIOC("network-traffic", RemoteIP), ""),
-            iff(isnotempty(RemoteUrl), CanonicalIOC("url", RemoteUrl), ""),
-            iff(isnotempty(UrlHost), CanonicalIOC("domain-name", UrlHost), "")
+        | summarize Hits = count() by RemoteIP, RemoteUrl
+        | extend IP = NormalizeIP(RemoteIP), Host = UrlHost(RemoteUrl)
+        | mv-expand Observation = pack_array(
+            bag_pack("Type", iff(IP contains ":", "ipv6-addr", "ipv4-addr"), "Value", IP),
+            bag_pack("Type", "network-traffic", "Value", IP),
+            bag_pack("Type", "url", "Value", RemoteUrl),
+            bag_pack("Type", "domain-name", "Value", Host)
         )
-        | mv-expand IOC = IOCs to typeof(string)
-        | where isnotempty(IOC)
-        | extend TelemetrySource = "DeviceNetworkEvents"
-        | project IOC, TelemetrySource
+        | project IOCType = tostring(Observation.Type), IOCValue = tostring(Observation.Value), Hits, TelemetrySource = "DeviceNetworkEvents"
     ),
     // Email URLs and domains
     (
         EmailUrlInfo
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
         | where isnotempty(Url) or isnotempty(UrlDomain)
-        | extend IOCs = pack_array(
-            iff(isnotempty(Url), CanonicalIOC("url", Url), ""),
-            iff(isnotempty(UrlDomain), CanonicalIOC("domain-name", UrlDomain), "")
+        | summarize Hits = count() by Url, UrlDomain
+        | mv-expand Observation = pack_array(
+            bag_pack("Type", "url", "Value", Url),
+            bag_pack("Type", "domain-name", "Value", UrlDomain)
         )
-        | mv-expand IOC = IOCs to typeof(string)
-        | where isnotempty(IOC)
-        | extend TelemetrySource = "EmailUrlInfo"
-        | project IOC, TelemetrySource
+        | project IOCType = tostring(Observation.Type), IOCValue = tostring(Observation.Value), Hits, TelemetrySource = "EmailUrlInfo"
+    ),
+    // Clicked URLs and domains (Safe Links)
+    (
+        UrlClickEvents
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
+        | where isnotempty(Url)
+        | summarize Hits = count() by Url
+        | mv-expand Observation = pack_array(
+            bag_pack("Type", "url", "Value", Url),
+            bag_pack("Type", "domain-name", "Value", UrlHost(Url))
+        )
+        | project IOCType = tostring(Observation.Type), IOCValue = tostring(Observation.Value), Hits, TelemetrySource = "UrlClickEvents"
     ),
     // Email attachment hashes
     (
         EmailAttachmentInfo
-        | where isnotempty(SHA256) or isnotempty(SHA1)
-        | extend IOCs = pack_array(
-            iff(isnotempty(SHA256), CanonicalIOC("file", SHA256), ""),
-            iff(isnotempty(SHA1), CanonicalIOC("file", SHA1), "")
-        )
-        | mv-expand IOC = IOCs to typeof(string)
-        | where isnotempty(IOC)
-        | extend TelemetrySource = "EmailAttachmentInfo"
-        | project IOC, TelemetrySource
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
+        | summarize Hits = count() by SHA256, SHA1 = tostring(column_ifexists("SHA1", ""))
+        | mv-expand IOCValue = pack_array(SHA256, SHA1) to typeof(string)
+        | project IOCType = "file", IOCValue, Hits, TelemetrySource = "EmailAttachmentInfo"
     ),
     // Email addresses + derived email domains
     (
         EmailEvents
-        | extend SenderFromAddress = tostring(column_ifexists("SenderFromAddress", "")),
-                 SenderMailFromAddress = tostring(column_ifexists("SenderMailFromAddress", "")),
-                 RecipientEmailAddress = tostring(column_ifexists("RecipientEmailAddress", ""))
-        | extend EmailCandidates = pack_array(SenderFromAddress, SenderMailFromAddress, RecipientEmailAddress)
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
+        | extend EmailCandidates = pack_array(
+            tostring(column_ifexists("SenderFromAddress", "")),
+            tostring(column_ifexists("SenderMailFromAddress", "")),
+            tostring(column_ifexists("RecipientEmailAddress", ""))
+        )
         | mv-expand EmailAddress = EmailCandidates to typeof(string)
         | extend EmailAddress = tolower(trim(" ", EmailAddress))
-        | where isnotempty(EmailAddress) and EmailAddress contains "@"
-        | extend EmailDomain = tostring(split(EmailAddress, "@", 1))
-        | extend IOCs = pack_array(
-            CanonicalIOC("email-addr", EmailAddress),
-            iff(isnotempty(EmailDomain), CanonicalIOC("domain-name", EmailDomain), "")
+        | where EmailAddress contains "@"
+        | summarize Hits = count() by EmailAddress
+        | mv-expand Observation = pack_array(
+            bag_pack("Type", "email-addr", "Value", EmailAddress),
+            bag_pack("Type", "domain-name", "Value", tostring(split(EmailAddress, "@")[1]))
         )
-        | mv-expand IOC = IOCs to typeof(string)
-        | where isnotempty(IOC)
-        | extend TelemetrySource = "EmailEvents"
-        | project IOC, TelemetrySource
+        | project IOCType = tostring(Observation.Type), IOCValue = tostring(Observation.Value), Hits, TelemetrySource = "EmailEvents"
+    ),
+    // Entra ID sign-in source IPs
+    (
+        SigninLogs
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
+        | where isnotempty(IPAddress)
+        | summarize Hits = count() by IP = NormalizeIP(IPAddress)
+        | mv-expand Observation = pack_array(
+            bag_pack("Type", iff(IP contains ":", "ipv6-addr", "ipv4-addr"), "Value", IP),
+            bag_pack("Type", "network-traffic", "Value", IP)
+        )
+        | project IOCType = tostring(Observation.Type), IOCValue = tostring(Observation.Value), Hits, TelemetrySource = "SigninLogs"
     )
+    | where isnotempty(IOCValue)
+    | mv-expand MatchValue = iff(IOCType == "domain-name", DomainAndParents(IOCValue), pack_array(IOCValue)) to typeof(string)
+    | extend IOC = CanonicalIOC(IOCType, MatchValue)
     | summarize
-        TelemetryHitCount = count(),
+        TelemetryHitCount = sum(Hits),
         TelemetrySources = make_set(TelemetrySource)
         by IOC;
 // -----------------------------
@@ -157,8 +219,10 @@ let TelemetryIOCs =
 // -----------------------------
 let IncidentEntityIOCs =
     SecurityIncident
-    | where Status == "Closed"
+    | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
+    // Filter on the latest state, so incidents reopened after closure are excluded
     | summarize arg_max(TimeGenerated, *) by IncidentNumber
+    | where Status == "Closed"
     | extend IncidentClassification =
         case(
             Classification == "TruePositive", "TruePositive",
@@ -176,6 +240,7 @@ let IncidentEntityIOCs =
     | mv-expand AlertId = AlertIds to typeof(string)
     | join kind=inner (
         SecurityAlert
+        | where TimeGenerated between (TelemetryStart .. TelemetryEnd)
         | where isnotempty(Entities)
         | project
             SystemAlertId,
@@ -196,18 +261,21 @@ let IncidentEntityIOCs =
         isnotempty(tostring(Entity.RecipientEmailAddress)), tostring(Entity.RecipientEmailAddress),
         ""
     )
+    | extend EntityIP = NormalizeIP(tostring(Entity.Address))
     | extend IOCCandidates = pack_array(
-        iff(EntityType == "ip", CanonicalIOC("ipv4-addr", tostring(Entity.Address)), ""),
-        iff(EntityType == "ip", CanonicalIOC("ipv6-addr", tostring(Entity.Address)), ""),
-        iff(EntityType == "ip", CanonicalIOC("network-traffic", tostring(Entity.Address)), ""),
-        iff(EntityType == "url", CanonicalIOC("url", tostring(Entity.Url)), ""),
-        iff(EntityType == "dns", CanonicalIOC("domain-name", tostring(Entity.DomainName)), ""),
-        iff(EntityType == "filehash", CanonicalIOC("file", tostring(Entity.Value)), ""),
-        iff(isnotempty(EntityEmail) and EntityEmail contains "@", CanonicalIOC("email-addr", EntityEmail), ""),
-        iff(isnotempty(EntityEmail) and EntityEmail contains "@", CanonicalIOC("domain-name", tostring(split(EntityEmail, "@", 1))), "")
+        bag_pack("Type", iff(EntityType == "ip", iff(EntityIP contains ":", "ipv6-addr", "ipv4-addr"), ""), "Value", EntityIP),
+        bag_pack("Type", iff(EntityType == "ip", "network-traffic", ""), "Value", EntityIP),
+        bag_pack("Type", iff(EntityType == "url", "url", ""), "Value", tostring(Entity.Url)),
+        bag_pack("Type", iff(EntityType == "dns", "domain-name", ""), "Value", tostring(Entity.DomainName)),
+        bag_pack("Type", iff(EntityType == "filehash", "file", ""), "Value", tostring(Entity.Value)),
+        bag_pack("Type", iff(EntityEmail contains "@", "email-addr", ""), "Value", EntityEmail),
+        bag_pack("Type", iff(EntityEmail contains "@", "domain-name", ""), "Value", tostring(split(EntityEmail, "@")[1]))
     )
-    | mv-expand IncidentIOC = IOCCandidates to typeof(string)
-    | where isnotempty(IncidentIOC)
+    | mv-expand Candidate = IOCCandidates
+    | extend CandidateType = tostring(Candidate.Type), CandidateValue = tostring(Candidate.Value)
+    | where isnotempty(CandidateType) and isnotempty(CandidateValue)
+    | mv-expand MatchValue = iff(CandidateType == "domain-name", DomainAndParents(CandidateValue), pack_array(CandidateValue)) to typeof(string)
+    | extend IncidentIOC = CanonicalIOC(CandidateType, MatchValue)
     | project
         IncidentNumber,
         IncidentTitle = Title,

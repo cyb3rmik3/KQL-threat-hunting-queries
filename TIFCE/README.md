@@ -102,25 +102,33 @@ This helps identify stale feeds versus feeds that continue to provide current in
 
 Pillars 2 and 3 rely on table availability and schema compatibility in the connected environment. If one or more tables are missing, results may be partial or empty.
 
+### Indicator lookback and versions
+
+- All pillars read `ThreatIntelIndicators` over their own lookback (`TILookback`, default 90 days), independent of the workbook Time Range. Align it with the table's retention.
+- Each indicator update writes a new row, so only the latest version of each indicator (by `Id`) is evaluated. Indicators revoked, deleted or expired in their latest version are not counted as active.
+
 ### Pillar 2 table matching scope
 
 - TI source table: `ThreatIntelIndicators`
 - Telemetry match tables:
 	- `DeviceFileEvents`
+	- `DeviceProcessEvents`
 	- `DeviceNetworkEvents`
 	- `EmailUrlInfo`
+	- `UrlClickEvents`
 	- `EmailAttachmentInfo`
 	- `EmailEvents`
+	- `SigninLogs`
+- Matching rules:
+	- File IOCs match SHA256, SHA1 or MD5
+	- URLs are compared without scheme and trailing slash
+	- A domain IOC also matches its subdomains (`evil.com` matches `a.evil.com`)
+	- Bare hosts in `RemoteUrl` are parsed as domains, and IPv4-mapped IPv6 addresses are reduced to IPv4
 
 ### Pillar 3 table matching and correlation scope
 
 - TI source table: `ThreatIntelIndicators`
-- Telemetry match tables:
-	- `DeviceFileEvents`
-	- `DeviceNetworkEvents`
-	- `EmailUrlInfo`
-	- `EmailAttachmentInfo`
-	- `EmailEvents`
+- Telemetry match tables and matching rules: same as Pillar 2
 - Incident correlation tables:
 	- `SecurityIncident`
 	- `SecurityAlert`
@@ -145,7 +153,7 @@ Feedback is welcome.
 - The workbook is prepared as a shared Sentinel workbook deployed through `Microsoft.Insights/workbooks`.
 - Workbook content has been parameterized to avoid hardcoded workspace bindings.
 - The workbook uses a workspace selector and time range controls inside the workbook itself.
-- Pillar 2 relies on the hunting blade time range rather than a hardcoded telemetry lookback in the query source.
+- In the workbook, Pillars 2 and 3 take their telemetry and incident window from the Time Range picker. Run standalone, the query files default to the last 30 days (`TelemetryStart` / `TelemetryEnd`).
 
 ## References
 
