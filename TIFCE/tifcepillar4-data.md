@@ -105,3 +105,28 @@ FeedIOCState
     LastFeedActivity,
     FreshnessStatus
 ```
+
+```
+// ================================================
+// TIFCE Pillar 4: New IOCs per day
+//
+// Purpose:
+// - Chart how many indicators each feed adds per day.
+// - Days without new indicators are plotted as zero, so a feed that has
+//   stopped delivering shows up before its freshness status turns stale.
+// ================================================
+// Indicator versions older than this are ignored; align it with the table's retention
+let TILookback = 90d;
+// Chart window when run standalone; the workbook uses its Time Range picker
+let ChartStart = ago(30d);
+let ChartEnd = now();
+ThreatIntelIndicators
+| where TimeGenerated > ago(TILookback)
+// Each update writes a new row; keep only the latest version of each indicator,
+// remembering when its first version was seen
+| summarize arg_max(TimeGenerated, *), FirstVersionTime = min(TimeGenerated) by Id
+| where isnotempty(SourceSystem)
+| extend AddedTime = coalesce(todatetime(column_ifexists("Created", datetime(null))), FirstVersionTime)
+| where AddedTime between (ChartStart .. ChartEnd)
+| make-series NewIOCs = count() default = 0 on AddedTime from bin(ChartStart, 1d) to ChartEnd step 1d by Feed = tostring(SourceSystem)
+```

@@ -90,6 +90,8 @@ This query correlates telemetry-matched IOCs to closed Sentinel incidents and di
 
 This helps assess whether a feed contributes indicators linked to confirmed malicious activity instead of noise or non-malicious detections.
 
+The workbook also charts, per feed, the closed incidents linked to its IOCs split into true positive, benign positive, false positive and undetermined. The chart runs its own copy of the Pillar 3 query, so the Pillar 3 telemetry matching runs twice per page load.
+
 ### Pillar 4: Feed Freshness
 
 Source: [tifcepillar4-data.md](./tifcepillar4-data.md)
@@ -97,6 +99,8 @@ Source: [tifcepillar4-data.md](./tifcepillar4-data.md)
 This query evaluates how recently each feed added or updated indicators and combines recency with IOC addition velocity to produce a freshness score.
 
 This helps identify stale feeds versus feeds that continue to provide current intelligence.
+
+A second query in the same file charts new IOCs per day for each feed. Days without new indicators are plotted as zero, so a feed that has stopped delivering shows up before its freshness status turns stale.
 
 ## Limitations
 

@@ -313,6 +313,10 @@ ActiveIOCs
         isnotempty(IncidentClassification)
         and IncidentClassification != "TruePositive"
     ),
+    // Classification mix of the noise side, charted per feed in the workbook
+    BenignPositiveIncidentCount = dcountif(IncidentNumber, IncidentClassification == "BenignPositive"),
+    FalsePositiveIncidentCount = dcountif(IncidentNumber, IncidentClassification == "FalsePositive"),
+    UndeterminedIncidentCount = dcountif(IncidentNumber, IncidentClassification in ("Undetermined", "UnclassifiedClosed")),
     Classifications = make_set(IncidentClassification),
     ExampleIncidents = make_set(strcat(tostring(IncidentNumber), " - ", tostring(IncidentTitle)), 10),
     TelemetrySources = make_set(TelemetrySource)
@@ -355,5 +359,8 @@ ActiveIOCs
     IncidentEvidenceCoveragePct,
     ClosedIncidentCount,
     TruePositiveIncidentCount,
-    NoiseOrNotConfirmedIncidentCount
+    NoiseOrNotConfirmedIncidentCount,
+    BenignPositiveIncidentCount,
+    FalsePositiveIncidentCount,
+    UndeterminedIncidentCount
 ```
