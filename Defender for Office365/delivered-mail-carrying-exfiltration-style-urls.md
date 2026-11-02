@@ -3,7 +3,7 @@
 ## Description
 
 This query joins delivered messages to their URLs and flags long, encoded-looking query parameters or collector-style paths, the shape an AI assistant would be instructed to call. 
-- Note on field values: the exact DetectionMethods string can vary by tenant and evolve over time (in my data it appeared as {"Phish":["Prompt Injection..."]}). Confirm the literal in your own EmailEvents before operationalizing an alert, and treat this query's regex as a starting heuristic to tune against your legitimate URL patterns to keep false positives down. Always consider reviewing [https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-emailevents-table](Advanced Hunting schema).
+- Note on field values: the exact DetectionMethods string can vary by tenant and evolve over time (in my data it appeared as {"Phish":["Prompt Injection..."]}). Confirm the literal in your own EmailEvents before operationalizing an alert, and treat this query's regex as a starting heuristic to tune against your legitimate URL patterns to keep false positives down. Always consider reviewing [Advanced Hunting schema](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-emailevents-table).
 
 ### Microsoft Defender XDR
 ```
