@@ -1,0 +1,11 @@
+url_path,views_total,views_unique
+/cyb3rmik3/KQL-threat-hunting-queries,165,124
+/cyb3rmik3/KQL-threat-hunting-queries/tree/main/01.ThreatHunting,40,35
+/cyb3rmik3/KQL-threat-hunting-queries/tree/main,20,8
+/cyb3rmik3/KQL-threat-hunting-queries/pulls,19,3
+/cyb3rmik3/KQL-threat-hunting-queries/issues,17,5
+/cyb3rmik3/KQL-threat-hunting-queries/blob/main/MDVM/identify-endpoint-browser-extensions-with-can-turnoff-malware-protections-permissions.md,16,4
+/cyb3rmik3/KQL-threat-hunting-queries/tree/main/Defender For Endpoint,12,11
+/cyb3rmik3/KQL-threat-hunting-queries/tree/main/Sentinel,10,10
+/cyb3rmik3/KQL-threat-hunting-queries/blob/main/02.ThreatDetection/delivered-emails-identified-as-suspicious.md,10,5
+/cyb3rmik3/KQL-threat-hunting-queries/blob/main/01.ThreatHunting/CVE-2023-36884-dropped-file.md,9,8
